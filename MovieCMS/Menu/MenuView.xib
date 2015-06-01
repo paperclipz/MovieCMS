@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-au-TLT">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <rect key="frame" x="0.0" y="27" width="414" height="709"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="736" id="ClD-U1-5uo"/>
@@ -33,7 +33,7 @@
                 <constraint firstAttribute="trailing" secondItem="qgD-au-TLT" secondAttribute="trailing" id="Msj-Vd-Mdz"/>
                 <constraint firstAttribute="trailing" secondItem="qgD-au-TLT" secondAttribute="trailing" id="TUG-lq-PN5"/>
                 <constraint firstAttribute="bottom" secondItem="qgD-au-TLT" secondAttribute="bottom" id="jZj-46-tbz"/>
-                <constraint firstItem="qgD-au-TLT" firstAttribute="top" secondItem="tTd-jG-8YB" secondAttribute="top" id="ob7-Cq-cpj"/>
+                <constraint firstItem="qgD-au-TLT" firstAttribute="top" secondItem="tTd-jG-8YB" secondAttribute="top" constant="27" id="ob7-Cq-cpj"/>
                 <constraint firstItem="qgD-au-TLT" firstAttribute="leading" secondItem="tTd-jG-8YB" secondAttribute="leading" id="uIV-GS-rus"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>

@@ -7,7 +7,12 @@
 //
 
 #import "MenuTableViewCell.h"
+@interface MenuTableViewCell()
 
+@property(nonatomic,strong)UIImage* selectedImage;
+@property(nonatomic,strong)UIImage* UnSelectedImage;
+
+@end
 @implementation MenuTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -35,15 +40,26 @@
 
 -(void)initSelfView
 {
-
 }
 - (void)awakeFromNib {
     // Initialization code
-    NSLog(@"awakeFromNib");
+
+}
+
+-(void)SelectedView:(UIImage*)selectedImage UnselectedView:(UIImage*)unSelectedImage Title:(NSString*)title
+{
+    self.selectedImage = selectedImage;
+    self.UnSelectedImage = unSelectedImage;
+    self.lblTitle.text = title;
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+
     [super setSelected:selected animated:animated];
+    self.ibImageView.image = selected?self.selectedImage:self.UnSelectedImage;
+    self.lblTitle.textColor = selected?[UIColor greenColor]:[UIColor whiteColor];
+
 
     // Configure the view for the selected state
 }

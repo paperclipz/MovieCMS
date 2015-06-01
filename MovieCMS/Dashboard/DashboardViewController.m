@@ -9,6 +9,8 @@
 #import "DashboardViewController.h"
 #import "DashboardTableViewCell.h"
 @interface DashboardViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *btnContest;
+@property (strong, nonatomic) IBOutlet UIButton *btnWinner;
 
 @end
 

@@ -8,8 +8,22 @@
 
 #import "MenuViewController.h"
 #import "MenuTableViewCell.h"
+
+@interface CellObject : NSObject
+@property (nonatomic, strong)UIImage* selectedImage;
+@property (nonatomic, strong)UIImage* unSelectedImage;
+@property (nonatomic, strong)NSString* title;
+
+@end
+
+@implementation CellObject : NSObject
+
+
+@end
+
 @interface MenuViewController ()
 
+@property(nonatomic,strong)NSMutableArray* arrMenuList;
 @end
 
 @implementation MenuViewController
@@ -47,16 +61,22 @@
 #pragma mark - UITableView Source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return self.arrMenuList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    MenuTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"MenuTableViewCell"]
+    ;
     
-    MenuTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"MenuTableViewCell"];
-
+    UIView *selectionColor = [[UIView alloc] init];
+    selectionColor.backgroundColor = [UIColor colorWithRed:(48/255.0) green:(48/255.0) blue:(48/255.0) alpha:1];
+    cell.selectedBackgroundView = selectionColor;
+    CellObject* cellObj = self.arrMenuList[indexPath.row];
+    [cell SelectedView:cellObj.selectedImage UnselectedView:cellObj.unSelectedImage Title:cellObj.title];
     return cell;
 }
+
 #pragma mark - UITableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,8 +85,50 @@
         {
             self.didSelectMenuAtIndexBlock((int)indexPath.row);
         }
+    
 }
 
+#pragma mark - Declaration
+-(NSMutableArray*)arrMenuList
+{
+    if(!_arrMenuList)
+    {
+        
+        _arrMenuList = [NSMutableArray new];
+        CellObject* obj = [CellObject new];
+        obj.selectedImage = [UIImage new];
+        obj.unSelectedImage = [UIImage new];
+        obj.selectedImage = [UIImage imageNamed:@"003_plus_profile_selcted"];
+        obj.unSelectedImage = [UIImage imageNamed:@"003_plus_profile_nonselcted.png"];
+        obj.title =@"PROFILE";
+        
+        [_arrMenuList addObject:obj];
+        
+        
+        CellObject* obj2 = [CellObject new];
+        obj2.selectedImage = [UIImage new];
+        obj2.unSelectedImage = [UIImage new];
+        obj2.selectedImage = [UIImage imageNamed:@"003_plus_qr_selected.png"];
+        obj2.unSelectedImage = [UIImage imageNamed:@"003_plus_qr_nonselected.png"];
+        obj2.title =@"QR SCANNER";
+        
+        [_arrMenuList addObject:obj2];
+        
+        
+        CellObject* obj3 = [CellObject new];
+        obj3.selectedImage = [UIImage new];
+        obj3.unSelectedImage = [UIImage new];
+        obj3.selectedImage = [UIImage imageNamed:@"003_plus_setting_selected.png"];
+        obj3.unSelectedImage = [UIImage imageNamed:@"003_plus_setting_nonselected.png"];
+        obj3.title =@"SETTING";
+        
+        [_arrMenuList addObject:obj3];
+        
+    }
+    
+    
+    return _arrMenuList;
+}
 
 /*
 #pragma mark - Navigation
