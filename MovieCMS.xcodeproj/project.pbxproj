@@ -24,6 +24,10 @@
 		8ACB49831B1C33A9007575FB /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49821B1C33A9007575FB /* MenuTableViewCell.m */; };
 		8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49861B1C3966007575FB /* ProfileViewController.m */; };
 		8ACB49891B1C3966007575FB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB49871B1C3966007575FB /* ProfileViewController.xib */; };
+		8ACB498F1B1C3CB1007575FB /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB498D1B1C3CB1007575FB /* DashboardViewController.m */; };
+		8ACB49901B1C3CB1007575FB /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB498E1B1C3CB1007575FB /* DashboardViewController.xib */; };
+		8ACB49941B1C3E86007575FB /* DashboardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */; };
+		8ACB49951B1C3E86007575FB /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,12 @@
 		8ACB49851B1C3966007575FB /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Profile/ProfileViewController.h; sourceTree = "<group>"; };
 		8ACB49861B1C3966007575FB /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Profile/ProfileViewController.m; sourceTree = "<group>"; };
 		8ACB49871B1C3966007575FB /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Profile/ProfileViewController.xib; sourceTree = "<group>"; };
+		8ACB498C1B1C3CB1007575FB /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardViewController.h; path = Dashboard/DashboardViewController.h; sourceTree = "<group>"; };
+		8ACB498D1B1C3CB1007575FB /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardViewController.m; path = Dashboard/DashboardViewController.m; sourceTree = "<group>"; };
+		8ACB498E1B1C3CB1007575FB /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashboardViewController.xib; path = Dashboard/DashboardViewController.xib; sourceTree = "<group>"; };
+		8ACB49911B1C3E86007575FB /* DashboardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardTableViewCell.h; path = Dashboard/DashboardTableViewCell.h; sourceTree = "<group>"; };
+		8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardTableViewCell.m; path = Dashboard/DashboardTableViewCell.m; sourceTree = "<group>"; };
+		8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashboardTableViewCell.xib; path = Dashboard/DashboardTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,11 +201,33 @@
 		8ACB49841B1C3932007575FB /* MenuItem */ = {
 			isa = PBXGroup;
 			children = (
+				8ACB498B1B1C3C7F007575FB /* Dashboard */,
+				8ACB498A1B1C3C70007575FB /* Profile */,
+			);
+			name = MenuItem;
+			sourceTree = "<group>";
+		};
+		8ACB498A1B1C3C70007575FB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
 				8ACB49851B1C3966007575FB /* ProfileViewController.h */,
 				8ACB49861B1C3966007575FB /* ProfileViewController.m */,
 				8ACB49871B1C3966007575FB /* ProfileViewController.xib */,
 			);
-			name = MenuItem;
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		8ACB498B1B1C3C7F007575FB /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB498C1B1C3CB1007575FB /* DashboardViewController.h */,
+				8ACB498D1B1C3CB1007575FB /* DashboardViewController.m */,
+				8ACB498E1B1C3CB1007575FB /* DashboardViewController.xib */,
+				8ACB49911B1C3E86007575FB /* DashboardTableViewCell.h */,
+				8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */,
+				8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */,
+			);
+			name = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,10 +311,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ACB49891B1C3966007575FB /* ProfileViewController.xib in Resources */,
+				8ACB49901B1C3CB1007575FB /* DashboardViewController.xib in Resources */,
 				8A648AE61B1C0AD100B14575 /* Main.storyboard in Resources */,
 				8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */,
 				8A648AEB1B1C0AD100B14575 /* LaunchScreen.xib in Resources */,
 				8ACB49801B1C333E007575FB /* MenuTableViewCell.xib in Resources */,
+				8ACB49951B1C3E86007575FB /* DashboardTableViewCell.xib in Resources */,
 				8A648AE81B1C0AD100B14575 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +340,8 @@
 				8A648B0A1B1C0FCA00B14575 /* MFSideMenuShadow.m in Sources */,
 				8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */,
+				8ACB498F1B1C3CB1007575FB /* DashboardViewController.m in Sources */,
+				8ACB49941B1C3E86007575FB /* DashboardTableViewCell.m in Sources */,
 				8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */,
 				8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */,
 				8A648AE01B1C0AD100B14575 /* AppDelegate.m in Sources */,

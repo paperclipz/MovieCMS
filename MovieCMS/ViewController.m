@@ -39,7 +39,7 @@
     [self.mfSideMenuContainerViewController setLeftMenuViewController:self.menuViewController];
     
     [self.view addSubview:self.mfSideMenuContainerViewController.view];
-    [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
+    [self.mfSideMenuContainerViewController setCenterViewController:self.navDashboardViewController];
 
 }
 
@@ -78,6 +78,26 @@
     }
     return _profileViewController;
 }
+
+
+-(UINavigationController*)navDashboardViewController
+{
+    if(!_navDashboardViewController)
+    {
+        _navDashboardViewController = [[UINavigationController alloc]initWithRootViewController:self.dashboardViewController];
+    }
+    
+    return _navDashboardViewController;
+}
+
+-(MenuViewController*)dashboardViewController{
+    if(!_dashboardViewController)
+    {
+        _dashboardViewController = [DashboardViewController new];
+    }
+    return _dashboardViewController;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

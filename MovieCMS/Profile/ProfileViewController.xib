@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wY-np-fWd">
-                    <rect key="frame" x="0.0" y="159" width="414" height="21"/>
+                    <rect key="frame" x="0.0" y="86" width="414" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="7sW-EW-0f8"/>
                     </constraints>
@@ -26,10 +26,11 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="9wY-np-fWd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="159" id="26Y-0U-KPt"/>
+                <constraint firstItem="9wY-np-fWd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="86" id="26Y-0U-KPt"/>
                 <constraint firstItem="9wY-np-fWd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iAU-tC-sxD"/>
                 <constraint firstAttribute="trailing" secondItem="9wY-np-fWd" secondAttribute="trailing" id="nDw-rq-eo9"/>
             </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>

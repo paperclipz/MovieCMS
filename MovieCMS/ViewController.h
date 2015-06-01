@@ -10,7 +10,7 @@
 #import "MFSideMenu/MFSideMenu.h"
 #import "MenuViewController.h"
 #import "ProfileViewController.h"
-
+#import "DashboardViewController.h"
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) MFSideMenuContainerViewController *mfSideMenuContainerViewController;
@@ -22,6 +22,10 @@
 @property (strong, nonatomic) UINavigationController *navProfileViewController;
 
 @property (strong, nonatomic) ProfileViewController *profileViewController;
+
+@property (strong, nonatomic) UINavigationController *navDashboardViewController;
+
+@property (strong, nonatomic) DashboardViewController *dashboardViewController;
 
 
 @end
