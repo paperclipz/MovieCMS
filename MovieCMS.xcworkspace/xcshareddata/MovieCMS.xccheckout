@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>53AFBF58-D30E-4902-94C9-0A267DAC4598</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MovieCMS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B6F5E9E3EA5904DCCC294D5E6392E706FE0ED846</key>
+		<string>https://github.com/paperclipz/MovieCMS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MovieCMS.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B6F5E9E3EA5904DCCC294D5E6392E706FE0ED846</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/paperclipz/MovieCMS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B6F5E9E3EA5904DCCC294D5E6392E706FE0ED846</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B6F5E9E3EA5904DCCC294D5E6392E706FE0ED846</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MovieCMS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

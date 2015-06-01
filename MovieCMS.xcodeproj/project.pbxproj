@@ -14,6 +14,12 @@
 		8A648AE81B1C0AD100B14575 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A648AE71B1C0AD100B14575 /* Images.xcassets */; };
 		8A648AEB1B1C0AD100B14575 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A648AE91B1C0AD100B14575 /* LaunchScreen.xib */; };
 		8A648AF71B1C0AD100B14575 /* MovieCMSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648AF61B1C0AD100B14575 /* MovieCMSTests.m */; };
+		8A648B091B1C0FCA00B14575 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648B041B1C0FCA00B14575 /* MFSideMenuContainerViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8A648B0A1B1C0FCA00B14575 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648B061B1C0FCA00B14575 /* MFSideMenuShadow.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648B081B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m */; };
+		8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49761B1C2B96007575FB /* MenuViewController.m */; };
+		8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB497B1B1C2C15007575FB /* MenuView.m */; };
+		8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB497D1B1C2C23007575FB /* MenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,18 @@
 		8A648AF01B1C0AD100B14575 /* MovieCMSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieCMSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A648AF51B1C0AD100B14575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A648AF61B1C0AD100B14575 /* MovieCMSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCMSTests.m; sourceTree = "<group>"; };
+		8A648B021B1C0FCA00B14575 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		8A648B031B1C0FCA00B14575 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		8A648B041B1C0FCA00B14575 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		8A648B051B1C0FCA00B14575 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		8A648B061B1C0FCA00B14575 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		8A648B071B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		8A648B081B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		8ACB49751B1C2B96007575FB /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Menu/MenuViewController.h; sourceTree = "<group>"; };
+		8ACB49761B1C2B96007575FB /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Menu/MenuViewController.m; sourceTree = "<group>"; };
+		8ACB497A1B1C2C15007575FB /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Menu/MenuView.h; sourceTree = "<group>"; };
+		8ACB497B1B1C2C15007575FB /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuView.m; path = Menu/MenuView.m; sourceTree = "<group>"; };
+		8ACB497D1B1C2C23007575FB /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuView.xib; path = Menu/MenuView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				8A648AD91B1C0AD100B14575 /* MovieCMS */,
+				8A648B001B1C0FB500B14575 /* Plugin */,
 				8A648AF31B1C0AD100B14575 /* MovieCMSTests */,
 				8A648AD81B1C0AD100B14575 /* Products */,
 			);
@@ -81,6 +100,7 @@
 		8A648AD91B1C0AD100B14575 /* MovieCMS */ = {
 			isa = PBXGroup;
 			children = (
+				8ACB49741B1C2B60007575FB /* NavigationMenu */,
 				8A648ADE1B1C0AD100B14575 /* AppDelegate.h */,
 				8A648ADF1B1C0AD100B14575 /* AppDelegate.m */,
 				8A648AE11B1C0AD100B14575 /* ViewController.h */,
@@ -117,6 +137,41 @@
 				8A648AF51B1C0AD100B14575 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A648B001B1C0FB500B14575 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				8A648B011B1C0FCA00B14575 /* MFSideMenu */,
+			);
+			name = Plugin;
+			sourceTree = "<group>";
+		};
+		8A648B011B1C0FCA00B14575 /* MFSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8A648B021B1C0FCA00B14575 /* MFSideMenu.h */,
+				8A648B031B1C0FCA00B14575 /* MFSideMenuContainerViewController.h */,
+				8A648B041B1C0FCA00B14575 /* MFSideMenuContainerViewController.m */,
+				8A648B051B1C0FCA00B14575 /* MFSideMenuShadow.h */,
+				8A648B061B1C0FCA00B14575 /* MFSideMenuShadow.m */,
+				8A648B071B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.h */,
+				8A648B081B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m */,
+			);
+			name = MFSideMenu;
+			path = MovieCMS/MFSideMenu;
+			sourceTree = "<group>";
+		};
+		8ACB49741B1C2B60007575FB /* NavigationMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB49751B1C2B96007575FB /* MenuViewController.h */,
+				8ACB49761B1C2B96007575FB /* MenuViewController.m */,
+				8ACB497A1B1C2C15007575FB /* MenuView.h */,
+				8ACB497B1B1C2C15007575FB /* MenuView.m */,
+				8ACB497D1B1C2C23007575FB /* MenuView.xib */,
+			);
+			name = NavigationMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A648AE61B1C0AD100B14575 /* Main.storyboard in Resources */,
+				8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */,
 				8A648AEB1B1C0AD100B14575 /* LaunchScreen.xib in Resources */,
 				8A648AE81B1C0AD100B14575 /* Images.xcassets in Resources */,
 			);
@@ -220,6 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A648AE31B1C0AD100B14575 /* ViewController.m in Sources */,
+				8A648B091B1C0FCA00B14575 /* MFSideMenuContainerViewController.m in Sources */,
+				8A648B0A1B1C0FCA00B14575 /* MFSideMenuShadow.m in Sources */,
+				8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */,
+				8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */,
 				8A648AE01B1C0AD100B14575 /* AppDelegate.m in Sources */,
 				8A648ADD1B1C0AD100B14575 /* main.m in Sources */,
 			);
@@ -416,6 +477,7 @@
 				8A648AFC1B1C0AD100B14575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A648AFD1B1C0AD100B14575 /* Build configuration list for PBXNativeTarget "MovieCMSTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +486,7 @@
 				8A648AFF1B1C0AD100B14575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
