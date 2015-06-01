@@ -58,7 +58,7 @@
 
     [super setSelected:selected animated:animated];
     self.ibImageView.image = selected?self.selectedImage:self.UnSelectedImage;
-    self.lblTitle.textColor = selected?[UIColor greenColor]:[UIColor whiteColor];
+    self.lblTitle.textColor = selected?[UIColor colorWithRed:(53/255.0) green:(172/255.0) blue:(166/255.0) alpha:1]:[UIColor whiteColor];
 
 
     // Configure the view for the selected state
