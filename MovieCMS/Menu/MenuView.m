@@ -7,8 +7,9 @@
 //
 
 #import "MenuView.h"
-
+#import "MenuTableViewCell.h"
 @implementation MenuView
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -29,7 +30,6 @@
         if ([currentObject isKindOfClass:[self class]])
             NSLog(@"Nib View Added To [%@]", NSStringFromClass([self class]));
         
-        
         [currentObject initSelfView];
         return currentObject;
     }
@@ -41,5 +41,14 @@
 -(void)initSelfView
 {
     NSLog(@"MenuView.h initSelfView");
+}
+
+-(void)initTableViewDelegate :(id)delegate
+{
+    self.ibTableView.delegate = delegate;
+    self.ibTableView.dataSource = delegate;
+    [self.ibTableView registerClass:[MenuTableViewCell class] forCellReuseIdentifier:@"MenuTableViewCell"];
+
+
 }
 @end

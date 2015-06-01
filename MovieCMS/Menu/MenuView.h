@@ -10,4 +10,7 @@
 
 @interface MenuView : UIView
 + (id)initializeCustomView;
+@property (strong, nonatomic) IBOutlet UITableView *ibTableView;
+-(void)initTableViewDelegate :(id)delegate;
+
 @end

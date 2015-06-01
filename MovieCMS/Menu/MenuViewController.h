@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MenuView.h"
 
-@interface MenuViewController : UIViewController
+@interface MenuViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic)MenuView* menuView;
 @end

@@ -35,9 +35,34 @@
 {
     
     //[self.navigationController presentViewController:self.navigationViewController animated:YES completion:NULL];
+    self.mfSideMenuContainerViewController = [MFSideMenuContainerViewController new];
+    [self.mfSideMenuContainerViewController setLeftMenuViewController:self.menuViewController];
     
-    [self.view addSubview:self.menuViewController.view];
+    [self.view addSubview:self.mfSideMenuContainerViewController.view];
+    [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
+
 }
+
+-(UINavigationController*)navMenuViewController
+{
+    if(!_navMenuViewController)
+    {
+        _navMenuViewController = [[UINavigationController alloc]initWithRootViewController:self.menuViewController];
+    }
+    
+    return _navMenuViewController;
+}
+
+-(UINavigationController*)navProfileViewController
+{
+    if(!_navProfileViewController)
+    {
+        _navProfileViewController = [[UINavigationController alloc]initWithRootViewController:self.profileViewController];
+    }
+    
+    return _navProfileViewController;
+}
+
 -(MenuViewController*)menuViewController{
     if(!_menuViewController)
     {
@@ -45,6 +70,15 @@
     }
     return _menuViewController;
 }
+
+-(ProfileViewController*)profileViewController{
+    if(!_profileViewController)
+    {
+        _profileViewController = [ProfileViewController new];
+    }
+    return _profileViewController;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

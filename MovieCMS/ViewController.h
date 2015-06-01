@@ -9,11 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "MFSideMenu/MFSideMenu.h"
 #import "MenuViewController.h"
+#import "ProfileViewController.h"
 
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) MFSideMenuContainerViewController *mfSideMenuContainerViewController;
+
+@property (strong, nonatomic) UINavigationController *navMenuViewController;
+
 @property (strong, nonatomic) MenuViewController *menuViewController;
+
+@property (strong, nonatomic) UINavigationController *navProfileViewController;
+
+@property (strong, nonatomic) ProfileViewController *profileViewController;
 
 
 @end

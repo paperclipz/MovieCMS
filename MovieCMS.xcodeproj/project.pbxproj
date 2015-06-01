@@ -20,6 +20,10 @@
 		8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49761B1C2B96007575FB /* MenuViewController.m */; };
 		8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB497B1B1C2C15007575FB /* MenuView.m */; };
 		8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB497D1B1C2C23007575FB /* MenuView.xib */; };
+		8ACB49801B1C333E007575FB /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB497F1B1C333E007575FB /* MenuTableViewCell.xib */; };
+		8ACB49831B1C33A9007575FB /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49821B1C33A9007575FB /* MenuTableViewCell.m */; };
+		8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49861B1C3966007575FB /* ProfileViewController.m */; };
+		8ACB49891B1C3966007575FB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB49871B1C3966007575FB /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,12 @@
 		8ACB497A1B1C2C15007575FB /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Menu/MenuView.h; sourceTree = "<group>"; };
 		8ACB497B1B1C2C15007575FB /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuView.m; path = Menu/MenuView.m; sourceTree = "<group>"; };
 		8ACB497D1B1C2C23007575FB /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuView.xib; path = Menu/MenuView.xib; sourceTree = "<group>"; };
+		8ACB497F1B1C333E007575FB /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuTableViewCell.xib; path = Menu/MenuTableViewCell.xib; sourceTree = "<group>"; };
+		8ACB49811B1C33A9007575FB /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewCell.h; path = Menu/MenuTableViewCell.h; sourceTree = "<group>"; };
+		8ACB49821B1C33A9007575FB /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewCell.m; path = Menu/MenuTableViewCell.m; sourceTree = "<group>"; };
+		8ACB49851B1C3966007575FB /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Profile/ProfileViewController.h; sourceTree = "<group>"; };
+		8ACB49861B1C3966007575FB /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Profile/ProfileViewController.m; sourceTree = "<group>"; };
+		8ACB49871B1C3966007575FB /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Profile/ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 		8A648AD91B1C0AD100B14575 /* MovieCMS */ = {
 			isa = PBXGroup;
 			children = (
+				8ACB49841B1C3932007575FB /* MenuItem */,
 				8ACB49741B1C2B60007575FB /* NavigationMenu */,
 				8A648ADE1B1C0AD100B14575 /* AppDelegate.h */,
 				8A648ADF1B1C0AD100B14575 /* AppDelegate.m */,
@@ -170,8 +181,21 @@
 				8ACB497A1B1C2C15007575FB /* MenuView.h */,
 				8ACB497B1B1C2C15007575FB /* MenuView.m */,
 				8ACB497D1B1C2C23007575FB /* MenuView.xib */,
+				8ACB49811B1C33A9007575FB /* MenuTableViewCell.h */,
+				8ACB49821B1C33A9007575FB /* MenuTableViewCell.m */,
+				8ACB497F1B1C333E007575FB /* MenuTableViewCell.xib */,
 			);
 			name = NavigationMenu;
+			sourceTree = "<group>";
+		};
+		8ACB49841B1C3932007575FB /* MenuItem */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB49851B1C3966007575FB /* ProfileViewController.h */,
+				8ACB49861B1C3966007575FB /* ProfileViewController.m */,
+				8ACB49871B1C3966007575FB /* ProfileViewController.xib */,
+			);
+			name = MenuItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +278,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ACB49891B1C3966007575FB /* ProfileViewController.xib in Resources */,
 				8A648AE61B1C0AD100B14575 /* Main.storyboard in Resources */,
 				8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */,
 				8A648AEB1B1C0AD100B14575 /* LaunchScreen.xib in Resources */,
+				8ACB49801B1C333E007575FB /* MenuTableViewCell.xib in Resources */,
 				8A648AE81B1C0AD100B14575 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,9 +305,11 @@
 				8A648B091B1C0FCA00B14575 /* MFSideMenuContainerViewController.m in Sources */,
 				8A648B0A1B1C0FCA00B14575 /* MFSideMenuShadow.m in Sources */,
 				8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */,
 				8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */,
 				8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */,
 				8A648AE01B1C0AD100B14575 /* AppDelegate.m in Sources */,
+				8ACB49831B1C33A9007575FB /* MenuTableViewCell.m in Sources */,
 				8A648ADD1B1C0AD100B14575 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

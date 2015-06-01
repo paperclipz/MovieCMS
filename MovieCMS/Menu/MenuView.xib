@@ -10,15 +10,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1231" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS3-c6-eLE">
-                    <rect key="frame" x="169" y="84" width="39" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-au-TLT">
+                    <rect key="frame" x="0.0" y="90" width="414" height="646"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="646" id="ClD-U1-5uo"/>
+                    </constraints>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qgD-au-TLT" secondAttribute="trailing" id="6Uw-ip-m0r"/>
+                <constraint firstItem="qgD-au-TLT" firstAttribute="leading" secondItem="tTd-jG-8YB" secondAttribute="leading" id="Cf6-2s-0sa"/>
+                <constraint firstAttribute="trailing" secondItem="qgD-au-TLT" secondAttribute="trailing" id="TUG-lq-PN5"/>
+                <constraint firstAttribute="bottom" secondItem="qgD-au-TLT" secondAttribute="bottom" id="jZj-46-tbz"/>
+                <constraint firstItem="qgD-au-TLT" firstAttribute="leading" secondItem="tTd-jG-8YB" secondAttribute="leading" id="uIV-GS-rus"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <connections>
+                <outlet property="ibTableView" destination="qgD-au-TLT" id="TQd-ws-z6X"/>
+            </connections>
             <point key="canvasLocation" x="44" y="90"/>
         </view>
     </objects>

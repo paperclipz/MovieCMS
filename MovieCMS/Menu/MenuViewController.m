@@ -7,7 +7,7 @@
 //
 
 #import "MenuViewController.h"
-
+#import "MenuTableViewCell.h"
 @interface MenuViewController ()
 
 @end
@@ -34,6 +34,7 @@
     
     self.view = [MenuView initializeCustomView];
     self.menuView = (MenuView*)self.view;
+    [self.menuView initTableViewDelegate:self];
 
 }
 
@@ -41,6 +42,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableView Source
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    MenuTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"MenuTableViewCell"];
+
+    return cell;
 }
 
 /*
