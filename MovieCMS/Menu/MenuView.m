@@ -48,6 +48,8 @@
     self.ibTableView.delegate = delegate;
     self.ibTableView.dataSource = delegate;
     [self.ibTableView registerClass:[MenuTableViewCell class] forCellReuseIdentifier:@"MenuTableViewCell"];
+    [self.ibTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.ibTableView.backgroundColor = [UIColor clearColor];
 
 
 }

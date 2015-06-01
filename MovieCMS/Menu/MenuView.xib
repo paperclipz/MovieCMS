@@ -10,20 +10,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-au-TLT">
-                    <rect key="frame" x="0.0" y="90" width="414" height="646"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-au-TLT">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="646" id="ClD-U1-5uo"/>
+                        <constraint firstAttribute="height" constant="736" id="ClD-U1-5uo"/>
                     </constraints>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ClD-U1-5uo"/>
+                        </mask>
+                    </variation>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.24494949494949492" green="0.24494949494949492" blue="0.24494949494949492" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="qgD-au-TLT" secondAttribute="trailing" id="6Uw-ip-m0r"/>
+                <constraint firstItem="qgD-au-TLT" firstAttribute="leading" secondItem="tTd-jG-8YB" secondAttribute="leading" id="ATT-5e-ZZd"/>
                 <constraint firstItem="qgD-au-TLT" firstAttribute="leading" secondItem="tTd-jG-8YB" secondAttribute="leading" id="Cf6-2s-0sa"/>
+                <constraint firstAttribute="trailing" secondItem="qgD-au-TLT" secondAttribute="trailing" id="Msj-Vd-Mdz"/>
                 <constraint firstAttribute="trailing" secondItem="qgD-au-TLT" secondAttribute="trailing" id="TUG-lq-PN5"/>
                 <constraint firstAttribute="bottom" secondItem="qgD-au-TLT" secondAttribute="bottom" id="jZj-46-tbz"/>
+                <constraint firstItem="qgD-au-TLT" firstAttribute="top" secondItem="tTd-jG-8YB" secondAttribute="top" id="ob7-Cq-cpj"/>
                 <constraint firstItem="qgD-au-TLT" firstAttribute="leading" secondItem="tTd-jG-8YB" secondAttribute="leading" id="uIV-GS-rus"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>

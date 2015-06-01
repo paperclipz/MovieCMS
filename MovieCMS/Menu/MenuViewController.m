@@ -47,7 +47,7 @@
 #pragma mark - UITableView Source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,6 +57,16 @@
 
     return cell;
 }
+#pragma mark - UITableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+        if(_didSelectMenuAtIndexBlock)
+        {
+            self.didSelectMenuAtIndexBlock((int)indexPath.row);
+        }
+}
+
 
 /*
 #pragma mark - Navigation

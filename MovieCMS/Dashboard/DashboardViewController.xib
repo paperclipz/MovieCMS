@@ -3,6 +3,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardViewController">
             <connections>
@@ -16,35 +22,86 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PfS-8s-zT5">
-                    <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                    <rect key="frame" x="0.0" y="159" width="414" height="577"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="614" id="gSs-Ok-v4w"/>
-                        <constraint firstAttribute="height" constant="692" id="iyg-KY-fkL"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="534" id="gSs-Ok-v4w"/>
+                        <constraint firstAttribute="height" constant="577" id="iyg-KY-fkL"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="577" id="nPZ-qe-sto"/>
                     </constraints>
                 </tableView>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPa-fe-MS1">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GEG-Wu-AYc"/>
                         <constraint firstAttribute="height" constant="44" id="dKp-do-HmU"/>
                     </constraints>
                     <items>
                         <navigationItem title="Dashboard" id="jCy-HO-bwe"/>
                     </items>
                 </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zk4-hn-H48">
+                    <rect key="frame" x="0.0" y="44" width="414" height="82"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="82" id="0k3-lD-vXP"/>
+                        <constraint firstAttribute="height" constant="82" id="AeK-2N-Mrh"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="82" id="lim-u1-5av"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcu-5o-5om">
+                    <rect key="frame" x="0.0" y="127" width="212" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="8tc-im-Bzl"/>
+                        <constraint firstAttribute="width" constant="212" id="XaC-aQ-la9"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="XhA-yO-Nz5"/>
+                        <constraint firstAttribute="height" constant="30" id="iaS-or-hGo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="CONTEST">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evP-xE-8OL">
+                    <rect key="frame" x="202" y="126" width="212" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="HfX-M5-5cT"/>
+                        <constraint firstAttribute="width" constant="212" id="m1E-kH-Jrp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="WINNER">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002_6plus_winner_nonselected.png" translatesAutoresizingMaskIntoConstraints="NO" id="U6Z-lJ-i2P">
+                    <rect key="frame" x="36" y="127" width="30" height="30"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002_6plus_list_nonselected.png" translatesAutoresizingMaskIntoConstraints="NO" id="jwc-q6-h3u">
+                    <rect key="frame" x="240" y="127" width="30" height="30"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="oPa-fe-MS1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="18a-mC-gJq"/>
                 <constraint firstItem="PfS-8s-zT5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6W9-h5-chm"/>
+                <constraint firstAttribute="trailing" secondItem="evP-xE-8OL" secondAttribute="trailing" id="AWH-RY-l6f"/>
                 <constraint firstItem="PfS-8s-zT5" firstAttribute="top" secondItem="oPa-fe-MS1" secondAttribute="bottom" constant="152" id="B9r-mX-5FN"/>
+                <constraint firstItem="Zk4-hn-H48" firstAttribute="trailing" secondItem="evP-xE-8OL" secondAttribute="trailing" id="CQ5-2m-Eks"/>
                 <constraint firstAttribute="trailing" secondItem="PfS-8s-zT5" secondAttribute="trailing" id="CVh-0T-PJa"/>
                 <constraint firstAttribute="bottom" secondItem="PfS-8s-zT5" secondAttribute="bottom" id="EPw-nu-Vqr"/>
                 <constraint firstItem="oPa-fe-MS1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GmL-YI-UBJ"/>
                 <constraint firstAttribute="trailing" secondItem="oPa-fe-MS1" secondAttribute="trailing" id="PhP-Ky-ija"/>
+                <constraint firstItem="Zk4-hn-H48" firstAttribute="leading" secondItem="hcu-5o-5om" secondAttribute="leading" id="Tx1-Rx-pj3"/>
+                <constraint firstItem="hcu-5o-5om" firstAttribute="baseline" secondItem="evP-xE-8OL" secondAttribute="baseline" id="aFF-UR-cal"/>
+                <constraint firstItem="Zk4-hn-H48" firstAttribute="leading" secondItem="oPa-fe-MS1" secondAttribute="leading" id="bx3-Hz-8WH"/>
+                <constraint firstItem="Zk4-hn-H48" firstAttribute="trailing" secondItem="oPa-fe-MS1" secondAttribute="trailing" id="e5n-Qb-wTG"/>
                 <constraint firstItem="oPa-fe-MS1" firstAttribute="leading" secondItem="PfS-8s-zT5" secondAttribute="leading" id="egZ-od-10b"/>
                 <constraint firstAttribute="trailing" secondItem="oPa-fe-MS1" secondAttribute="trailing" id="mbM-e3-wP9"/>
-                <constraint firstItem="PfS-8s-zT5" firstAttribute="top" secondItem="oPa-fe-MS1" secondAttribute="bottom" id="tDy-Zf-WaN"/>
+                <constraint firstItem="hcu-5o-5om" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ryw-s5-ic5"/>
+                <constraint firstItem="PfS-8s-zT5" firstAttribute="top" secondItem="oPa-fe-MS1" secondAttribute="bottom" constant="115" id="tDy-Zf-WaN"/>
+                <constraint firstItem="evP-xE-8OL" firstAttribute="top" secondItem="Zk4-hn-H48" secondAttribute="bottom" id="tjL-Lw-jl2"/>
+                <constraint firstItem="Zk4-hn-H48" firstAttribute="top" secondItem="oPa-fe-MS1" secondAttribute="bottom" id="zev-2V-V7N"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <variation key="default">
@@ -54,4 +111,8 @@
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="002_6plus_list_nonselected.png" width="100" height="100"/>
+        <image name="002_6plus_winner_nonselected.png" width="100" height="100"/>
+    </resources>
 </document>

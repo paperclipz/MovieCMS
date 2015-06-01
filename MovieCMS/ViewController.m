@@ -31,6 +31,12 @@
     [self initSelfView];
 }
 
+-(void)menuClosed
+{
+    [self.mfSideMenuContainerViewController setMenuState:MFSideMenuStateClosed];
+    
+}
+
 -(void)initSelfView
 {
     
@@ -67,6 +73,13 @@
     if(!_menuViewController)
     {
         _menuViewController = [MenuViewController new];
+        __weak typeof(self)weakSelf = self;
+
+        _menuViewController.didSelectMenuAtIndexBlock = ^(int index){
+        
+            [weakSelf didSelectMenuAtIndex:index];
+            [weakSelf menuClosed];
+        };
     }
     return _menuViewController;
 }
@@ -90,7 +103,7 @@
     return _navDashboardViewController;
 }
 
--(MenuViewController*)dashboardViewController{
+-(DashboardViewController*)dashboardViewController{
     if(!_dashboardViewController)
     {
         _dashboardViewController = [DashboardViewController new];
@@ -98,6 +111,28 @@
     return _dashboardViewController;
 }
 
+
+-(void)didSelectMenuAtIndex:(int)index
+{
+    [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
+
+    switch (index) {
+        case 0:
+
+            break;
+        case 1:
+
+            break;
+        case 2:
+            [self.mfSideMenuContainerViewController setCenterViewController:self.navDashboardViewController];
+
+            break;
+            
+        default:
+            break;
+    }
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

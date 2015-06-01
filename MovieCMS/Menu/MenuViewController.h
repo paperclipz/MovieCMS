@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MenuView.h"
 
+typedef void (^DidSelectMenuAtIndexBlock)(int index);
 @interface MenuViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic)MenuView* menuView;
+@property (copy, nonatomic)DidSelectMenuAtIndexBlock didSelectMenuAtIndexBlock;
+
 @end
