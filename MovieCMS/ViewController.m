@@ -59,7 +59,7 @@
     [self.mfSideMenuContainerViewController setLeftMenuViewController:self.menuViewController];
     
     [self.view addSubview:self.mfSideMenuContainerViewController.view];
-    [self.mfSideMenuContainerViewController setCenterViewController:self.navDashboardViewController];
+    [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
 
 }
 

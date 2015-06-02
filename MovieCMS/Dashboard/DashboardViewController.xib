@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardViewController">
             <connections>
+                <outlet property="btnMenu" destination="LC0-ve-IdG" id="EvS-un-B8W"/>
                 <outlet property="ibCVSelection" destination="Xaz-tG-g87" id="CNu-nk-fuJ"/>
                 <outlet property="ibTableView" destination="PfS-8s-zT5" id="Sfx-Ey-3Fr"/>
                 <outlet property="ibTblWinner" destination="iBr-eS-Iin" id="lzg-qc-2MT"/>
@@ -29,19 +30,29 @@
                             <rect key="frame" x="0.0" y="0.0" width="93" height="72"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002_6plus_burger_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-vC-AEC">
-                                    <rect key="frame" x="9" y="16" width="40" height="40"/>
+                                    <rect key="frame" x="9" y="22" width="40" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="3yH-sI-XoE"/>
                                         <constraint firstAttribute="width" constant="40" id="o2E-IR-UJP"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC0-ve-IdG" userLabel="MenuButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="85" height="72"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="5LX-vC-AEC" firstAttribute="top" secondItem="CeD-yJ-ntK" secondAttribute="top" constant="16" id="5Ga-p4-b6g"/>
+                                <constraint firstItem="LC0-ve-IdG" firstAttribute="leading" secondItem="CeD-yJ-ntK" secondAttribute="leading" id="4sV-xW-plo"/>
+                                <constraint firstItem="5LX-vC-AEC" firstAttribute="top" secondItem="CeD-yJ-ntK" secondAttribute="top" constant="22" id="5Ga-p4-b6g"/>
+                                <constraint firstAttribute="trailing" secondItem="LC0-ve-IdG" secondAttribute="trailing" constant="8" id="87A-ub-slY"/>
                                 <constraint firstAttribute="width" constant="93" id="DaI-Gr-udZ"/>
+                                <constraint firstAttribute="bottom" secondItem="LC0-ve-IdG" secondAttribute="bottom" id="T6x-4k-s7D"/>
                                 <constraint firstAttribute="height" constant="72" id="TuN-kT-uvd"/>
                                 <constraint firstItem="5LX-vC-AEC" firstAttribute="leading" secondItem="CeD-yJ-ntK" secondAttribute="leading" constant="9" id="ofe-ns-fBf"/>
+                                <constraint firstItem="LC0-ve-IdG" firstAttribute="top" secondItem="CeD-yJ-ntK" secondAttribute="top" id="vfV-Sw-uWh"/>
                             </constraints>
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002_6plus_qticheaderlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="kdi-ec-n6y">
@@ -120,19 +131,20 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PfS-8s-zT5" userLabel="tblContest">
+                <tableView clipsSubviews="YES" tag="88" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PfS-8s-zT5" userLabel="tblContest">
                     <rect key="frame" x="0.0" y="191" width="320" height="377"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="377" id="TM4-mX-Dml"/>
                     </constraints>
                 </tableView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iBr-eS-Iin" userLabel="tblWinner">
+                <tableView clipsSubviews="YES" tag="99" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iBr-eS-Iin" userLabel="tblWinner">
                     <rect key="frame" x="0.0" y="191" width="320" height="377"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="377" id="ZFd-wD-4uO"/>
                     </constraints>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <view key="tableHeaderView" contentMode="scaleToFill" id="ayu-nJ-5f5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -350,7 +362,7 @@
                     </view>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1E9-un-FWJ"/>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="97U-PP-v5C"/>
@@ -366,6 +378,7 @@
                 <constraint firstAttribute="trailing" secondItem="JRx-cc-Kla" secondAttribute="trailing" id="d1P-7e-wpO"/>
                 <constraint firstItem="PfS-8s-zT5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="191" id="dMh-G2-4SU"/>
                 <constraint firstAttribute="bottom" secondItem="JRx-cc-Kla" secondAttribute="bottom" constant="496" id="fTt-EJ-aG5"/>
+                <constraint firstAttribute="bottom" secondItem="iBr-eS-Iin" secondAttribute="bottom" id="kDF-PS-VRC"/>
                 <constraint firstAttribute="bottom" secondItem="PfS-8s-zT5" secondAttribute="bottom" id="li1-cs-nU7"/>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pAI-dV-sii"/>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="trailing" secondItem="Zk4-hn-H48" secondAttribute="trailing" id="qJG-y8-pd0"/>

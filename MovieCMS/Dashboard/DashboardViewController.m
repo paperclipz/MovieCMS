@@ -11,7 +11,9 @@
 #import "MenuSelectionCVCell.h"
 #import "MovieClass.h"
 #import "DashboardWinnerTableViewCell.h"
+
 @interface DashboardViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *btnMenu;
 @property (strong, nonatomic) IBOutlet UIButton *btnContest;
 @property (strong, nonatomic) IBOutlet UIButton *btnWinner;
 @property (assign,nonatomic) int collectionViewIndex;
@@ -32,14 +34,23 @@
     self.collectionViewIndex = 0;
     [self initTableViewWithDelegate:self];
     [self initCollectionViewWithDelegate:self];
+    [self.btnMenu addTarget:self action:@selector(btnMenuClicked:) forControlEvents: UIControlEventTouchDown];
+    [self.btnMenu setTitle:@"" forState:UIControlStateNormal];
     [self styleNavBar];
     
 }
+
+-(void)btnMenuClicked:(id)sender
+{
+    [self toggleMenuOpen];
+}
+
+
 -(void)initTableViewWithDelegate:(id)delegate
 {
     self.ibTableView.delegate = delegate;
     self.ibTableView.dataSource = delegate;
-    
+    [self.ibTableView registerClass:[DashboardTableViewCell class] forCellReuseIdentifier:@"DashboardTableViewCell"];
     [self reloadTableView];
 
 }
@@ -49,7 +60,10 @@
     self.ibCVSelection.dataSource = delegate;
     self.ibCVSelection.backgroundColor = [UIColor clearColor];
     [self.ibCVSelection registerClass:[MenuSelectionCVCell class] forCellWithReuseIdentifier:@"MenuSelectionCVCell"];
-    
+    self.ibTblWinner.delegate = delegate;
+    self.ibTblWinner.dataSource = delegate;
+    self.ibTblWinner.backgroundColor = [UIColor clearColor];
+     [self.ibTblWinner registerClass:[DashboardWinnerTableViewCell class] forCellReuseIdentifier:@"DashboardWinnerTableViewCell"];
     
 }
 
@@ -61,13 +75,13 @@
             self.ibTableView.hidden = false;
             self.ibTblWinner.hidden = true;
             
-            [self.ibTableView registerClass:[DashboardTableViewCell class] forCellReuseIdentifier:@"DashboardTableViewCell"];
+        
             break;
         case 1:
             self.ibTableView.hidden = true;
             self.ibTblWinner.hidden = false;
             
-            [self.ibTblWinner registerClass:[DashboardWinnerTableViewCell class] forCellReuseIdentifier:@"DashboardWinnerTableViewCell"];
+           
             break;
     }
 
@@ -100,14 +114,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"aaaaa =  %f",self.arrTableList.count);
-    return self.arrTableList.count;
+
+    if (tableView.tag == 88) {
+        return self.arrTableList.count;
+
+    }
+    else{
+        return 30;
+
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (self.collectionViewIndex == 0) {
+    if (tableView.tag == 88) {
         DashboardTableViewCell* cell = [self.ibTableView dequeueReusableCellWithIdentifier:@"DashboardTableViewCell"];
         [cell initData:self.arrTableList[indexPath.row]];
         return cell;
@@ -231,6 +252,7 @@
     cell.layer.shadowOffset = CGSizeMake(0, 0);
     [UIView commitAnimations];
 }
+
 /*
 #pragma mark - Navigation
 

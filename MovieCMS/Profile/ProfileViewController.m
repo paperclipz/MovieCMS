@@ -9,6 +9,10 @@
 #import "ProfileViewController.h"
 
 @interface ProfileViewController ()
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *ibArrTextField;
+@property (strong, nonatomic) IBOutlet UIButton *ibBtnMenu;
+@property (assign, nonatomic) BOOL isEditing;
+
 
 @end
 
@@ -16,14 +20,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self initSelfView];
+      // Do any additional setup after loading the view from its nib.
+}
 
-    // Do any additional setup after loading the view from its nib.
+-(void)initSelfView
+{
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.ibBtnMenu setTitle:@"" forState:UIControlStateNormal];
+    [self.ibBtnMenu addTarget:self action:@selector(toggleMenuOpen) forControlEvents: UIControlEventTouchDown];
+    
+
+}
+
+-(void)makeTextFieldEditable:(BOOL)isEditable
+{
+    for (int i = 0;i<self.ibArrTextField.count;i++)
+    {
+        UITextField* tempTxtField =  self.ibArrTextField[i];
+        tempTxtField.borderStyle = isEditable?UITextBorderStyleRoundedRect:UITextBorderStyleNone;
+        tempTxtField.enabled = isEditable?YES:NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)btnEditClicked:(id)sender {
+    
+    self.isEditing = !self.isEditing;
+    [self makeTextFieldEditable:self.isEditing];
+    [(UIButton*)sender setTitle:self.isEditing?@"DONE":@"EDIT" forState:UIControlStateNormal];
 }
 
 /*
