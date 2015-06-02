@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MovieClass.h"
 @interface DashboardTableViewCell : UITableViewCell
+-(void)initData:(MovieClass*)obj;
 
 @end

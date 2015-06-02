@@ -11,6 +11,8 @@
 #import "MenuViewController.h"
 #import "ProfileViewController.h"
 #import "DashboardViewController.h"
+#import "QRScannerViewController.h"
+
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) MFSideMenuContainerViewController *mfSideMenuContainerViewController;
@@ -27,6 +29,10 @@
 
 @property (strong, nonatomic) DashboardViewController *dashboardViewController;
 
+
+@property (strong, nonatomic) UINavigationController *navQRScannerViewController;
+
+@property (strong, nonatomic) QRScannerViewController *qrScannerViewController;
 
 @end
 

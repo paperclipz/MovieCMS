@@ -1,17 +1,14 @@
 //
-//  DashboardTableViewCell.m
+//  DashboardWinnerTableViewCell.m
 //  MovieCMS
 //
-//  Created by Paperclipz on 6/1/15.
+//  Created by Paperclipz on 6/2/15.
 //  Copyright (c) 2015 AppDesignStudio. All rights reserved.
 //
 
-#import "DashboardTableViewCell.h"
+#import "DashboardWinnerTableViewCell.h"
 
-@interface DashboardTableViewCell()
-@property (strong, nonatomic) IBOutlet UIImageView *ibImageView;
-@end
-@implementation DashboardTableViewCell
+@implementation DashboardWinnerTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -41,10 +38,6 @@
     
 }
 
--(void)initData:(MovieClass*)obj
-{
-    self.ibImageView.image = obj.image;
-}
 
 - (void)awakeFromNib {
     // Initialization code

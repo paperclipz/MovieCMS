@@ -7,11 +7,25 @@
 //
 
 #import "ViewController.h"
+#import "CustomNavBar.h"
 
 @interface ViewController ()
 
 @end
 
+@implementation UINavigationBar (UINavigationBarCategory)
+
+- (void)drawRect:(CGRect)rect
+{
+ 
+    UIView *imageView = [[UIView alloc] init];
+    imageView.backgroundColor = [UIColor colorWithRed:(48/255.0) green:(48/255.0) blue:(48/255.0) alpha:1];
+}
+-(void)ggaaa
+{
+
+}
+@end
 @implementation ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -111,6 +125,23 @@
     return _dashboardViewController;
 }
 
+-(UINavigationController*)navQRScannerViewController
+{
+    if(!_navQRScannerViewController)
+    {
+        _navQRScannerViewController = [[UINavigationController alloc]initWithRootViewController:self.qrScannerViewController];
+    }
+    return _navDashboardViewController;
+}
+
+-(QRScannerViewController*)qrScannerViewController{
+    if(!_qrScannerViewController)
+    {
+        _qrScannerViewController = [QRScannerViewController new];
+    }
+    return _qrScannerViewController;
+}
+
 
 -(void)didSelectMenuAtIndex:(int)index
 {
@@ -118,9 +149,11 @@
 
     switch (index) {
         case 0:
+            [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
 
             break;
         case 1:
+            [self.mfSideMenuContainerViewController setCenterViewController:self.qrScannerViewController];
 
             break;
         case 2:

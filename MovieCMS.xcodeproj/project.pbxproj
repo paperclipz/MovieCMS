@@ -61,6 +61,19 @@
 		8AABB4AB1B1C78ED005057F1 /* 008B_6plus_downbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB48A1B1C78ED005057F1 /* 008B_6plus_downbutton.png */; };
 		8AABB4AC1B1C78ED005057F1 /* 001_6plus_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB48C1B1C78ED005057F1 /* 001_6plus_background.png */; };
 		8AABB4AD1B1C78ED005057F1 /* 001_6plus_biglogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB48D1B1C78ED005057F1 /* 001_6plus_biglogo.png */; };
+		8AABB4B01B1CBFCE005057F1 /* CustomNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4AF1B1CBFCE005057F1 /* CustomNavBar.m */; };
+		8AABB4B21B1CBFE6005057F1 /* CustomNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4B11B1CBFE6005057F1 /* CustomNavBar.xib */; };
+		8AABB4B71B1D5760005057F1 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4B51B1D5760005057F1 /* QRScannerViewController.m */; };
+		8AABB4B81B1D5760005057F1 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4B61B1D5760005057F1 /* QRScannerViewController.xib */; };
+		8AABB4BC1B1D8804005057F1 /* MenuSelectionCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4BA1B1D8804005057F1 /* MenuSelectionCVCell.m */; };
+		8AABB4BD1B1D8804005057F1 /* MenuSelectionCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4BB1B1D8804005057F1 /* MenuSelectionCVCell.xib */; };
+		8AABB4C11B1D8A76005057F1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4C01B1D8A76005057F1 /* Utils.m */; };
+		8AABB4C51B1DA247005057F1 /* sample001.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4C31B1DA247005057F1 /* sample001.png */; };
+		8AABB4C61B1DA247005057F1 /* sample002.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4C41B1DA247005057F1 /* sample002.png */; };
+		8AABB4CA1B1DA8E8005057F1 /* MovieClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4C91B1DA8E8005057F1 /* MovieClass.m */; };
+		8AABB4CC1B1DAC09005057F1 /* sample003.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4CB1B1DAC09005057F1 /* sample003.png */; };
+		8AABB4D01B1DB900005057F1 /* DashboardWinnerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4CE1B1DB900005057F1 /* DashboardWinnerTableViewCell.m */; };
+		8AABB4D11B1DB900005057F1 /* DashboardWinnerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4CF1B1DB900005057F1 /* DashboardWinnerTableViewCell.xib */; };
 		8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49761B1C2B96007575FB /* MenuViewController.m */; };
 		8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB497B1B1C2C15007575FB /* MenuView.m */; };
 		8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB497D1B1C2C23007575FB /* MenuView.xib */; };
@@ -116,7 +129,7 @@
 		8AABB41D1B1C5567005057F1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		8AABB41E1B1C5567005057F1 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		8AABB41F1B1C5567005057F1 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
-		8AABB42B1B1C7783005057F1 /* snsd_genie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snsd_genie.jpg; sourceTree = "<group>"; };
+		8AABB42B1B1C7783005057F1 /* snsd_genie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = snsd_genie.jpg; path = ../MovieCMS/snsd_genie.jpg; sourceTree = "<group>"; };
 		8AABB46C1B1C78ED005057F1 /* 001_6plus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001_6plus.jpg; sourceTree = "<group>"; };
 		8AABB46D1B1C78ED005057F1 /* 002_6plus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 002_6plus.jpg; sourceTree = "<group>"; };
 		8AABB46E1B1C78ED005057F1 /* 003_plus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003_plus.jpg; sourceTree = "<group>"; };
@@ -149,6 +162,26 @@
 		8AABB48A1B1C78ED005057F1 /* 008B_6plus_downbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 008B_6plus_downbutton.png; sourceTree = "<group>"; };
 		8AABB48C1B1C78ED005057F1 /* 001_6plus_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001_6plus_background.png; sourceTree = "<group>"; };
 		8AABB48D1B1C78ED005057F1 /* 001_6plus_biglogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001_6plus_biglogo.png; sourceTree = "<group>"; };
+		8AABB4AE1B1CBFCE005057F1 /* CustomNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavBar.h; sourceTree = "<group>"; };
+		8AABB4AF1B1CBFCE005057F1 /* CustomNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavBar.m; sourceTree = "<group>"; };
+		8AABB4B11B1CBFE6005057F1 /* CustomNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNavBar.xib; sourceTree = "<group>"; };
+		8AABB4B41B1D5760005057F1 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QRScannerViewController.h; path = QRSCananer/QRScannerViewController.h; sourceTree = "<group>"; };
+		8AABB4B51B1D5760005057F1 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRScannerViewController.m; path = QRSCananer/QRScannerViewController.m; sourceTree = "<group>"; };
+		8AABB4B61B1D5760005057F1 /* QRScannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QRScannerViewController.xib; path = QRSCananer/QRScannerViewController.xib; sourceTree = "<group>"; };
+		8AABB4B91B1D8804005057F1 /* MenuSelectionCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSelectionCVCell.h; sourceTree = "<group>"; };
+		8AABB4BA1B1D8804005057F1 /* MenuSelectionCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSelectionCVCell.m; sourceTree = "<group>"; };
+		8AABB4BB1B1D8804005057F1 /* MenuSelectionCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuSelectionCVCell.xib; sourceTree = "<group>"; };
+		8AABB4BF1B1D8A76005057F1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Common/Utils.h; sourceTree = "<group>"; };
+		8AABB4C01B1D8A76005057F1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = Common/Utils.m; sourceTree = "<group>"; };
+		8AABB4C21B1D8C21005057F1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		8AABB4C31B1DA247005057F1 /* sample001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample001.png; sourceTree = "<group>"; };
+		8AABB4C41B1DA247005057F1 /* sample002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample002.png; sourceTree = "<group>"; };
+		8AABB4C81B1DA8E8005057F1 /* MovieClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieClass.h; path = Models/MovieClass.h; sourceTree = "<group>"; };
+		8AABB4C91B1DA8E8005057F1 /* MovieClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieClass.m; path = Models/MovieClass.m; sourceTree = "<group>"; };
+		8AABB4CB1B1DAC09005057F1 /* sample003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample003.png; sourceTree = "<group>"; };
+		8AABB4CD1B1DB900005057F1 /* DashboardWinnerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardWinnerTableViewCell.h; path = Dashboard/DashboardWinnerTableViewCell.h; sourceTree = "<group>"; };
+		8AABB4CE1B1DB900005057F1 /* DashboardWinnerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardWinnerTableViewCell.m; path = Dashboard/DashboardWinnerTableViewCell.m; sourceTree = "<group>"; };
+		8AABB4CF1B1DB900005057F1 /* DashboardWinnerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashboardWinnerTableViewCell.xib; path = Dashboard/DashboardWinnerTableViewCell.xib; sourceTree = "<group>"; };
 		8ACB49751B1C2B96007575FB /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Menu/MenuViewController.h; sourceTree = "<group>"; };
 		8ACB49761B1C2B96007575FB /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Menu/MenuViewController.m; sourceTree = "<group>"; };
 		8ACB497A1B1C2C15007575FB /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Menu/MenuView.h; sourceTree = "<group>"; };
@@ -218,7 +251,12 @@
 				8A648AE41B1C0AD100B14575 /* Main.storyboard */,
 				8A648AE71B1C0AD100B14575 /* Images.xcassets */,
 				8A648AE91B1C0AD100B14575 /* LaunchScreen.xib */,
+				8AABB4C71B1DA8BC005057F1 /* Models */,
+				8AABB4BE1B1D8A57005057F1 /* Common */,
 				8A648ADA1B1C0AD100B14575 /* Supporting Files */,
+				8AABB4AE1B1CBFCE005057F1 /* CustomNavBar.h */,
+				8AABB4AF1B1CBFCE005057F1 /* CustomNavBar.m */,
+				8AABB4B11B1CBFE6005057F1 /* CustomNavBar.xib */,
 			);
 			path = MovieCMS;
 			sourceTree = "<group>";
@@ -226,9 +264,9 @@
 		8A648ADA1B1C0AD100B14575 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8AABB4C21B1D8C21005057F1 /* PrefixHeader.pch */,
 				8AABB46B1B1C78ED005057F1 /* Flow */,
 				8AABB4741B1C78ED005057F1 /* icon */,
-				8AABB42B1B1C7783005057F1 /* snsd_genie.jpg */,
 				8AABB4131B1C555A005057F1 /* font */,
 				8AABB3D41B1C51A8005057F1 /* Images */,
 				8A648ADB1B1C0AD100B14575 /* Info.plist */,
@@ -287,6 +325,10 @@
 		8AABB3D41B1C51A8005057F1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8AABB4CB1B1DAC09005057F1 /* sample003.png */,
+				8AABB4C31B1DA247005057F1 /* sample001.png */,
+				8AABB4C41B1DA247005057F1 /* sample002.png */,
+				8AABB42B1B1C7783005057F1 /* snsd_genie.jpg */,
 			);
 			name = Images;
 			path = MovieCMSTests;
@@ -374,6 +416,34 @@
 			path = icon;
 			sourceTree = "<group>";
 		};
+		8AABB4B31B1D5736005057F1 /* QRScanner */ = {
+			isa = PBXGroup;
+			children = (
+				8AABB4B41B1D5760005057F1 /* QRScannerViewController.h */,
+				8AABB4B51B1D5760005057F1 /* QRScannerViewController.m */,
+				8AABB4B61B1D5760005057F1 /* QRScannerViewController.xib */,
+			);
+			name = QRScanner;
+			sourceTree = "<group>";
+		};
+		8AABB4BE1B1D8A57005057F1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8AABB4BF1B1D8A76005057F1 /* Utils.h */,
+				8AABB4C01B1D8A76005057F1 /* Utils.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		8AABB4C71B1DA8BC005057F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AABB4C81B1DA8E8005057F1 /* MovieClass.h */,
+				8AABB4C91B1DA8E8005057F1 /* MovieClass.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		8ACB49741B1C2B60007575FB /* NavigationMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +462,7 @@
 		8ACB49841B1C3932007575FB /* MenuItem */ = {
 			isa = PBXGroup;
 			children = (
+				8AABB4B31B1D5736005057F1 /* QRScanner */,
 				8ACB498B1B1C3C7F007575FB /* Dashboard */,
 				8ACB498A1B1C3C70007575FB /* Profile */,
 			);
@@ -417,6 +488,12 @@
 				8ACB49911B1C3E86007575FB /* DashboardTableViewCell.h */,
 				8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */,
 				8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */,
+				8AABB4B91B1D8804005057F1 /* MenuSelectionCVCell.h */,
+				8AABB4BA1B1D8804005057F1 /* MenuSelectionCVCell.m */,
+				8AABB4BB1B1D8804005057F1 /* MenuSelectionCVCell.xib */,
+				8AABB4CD1B1DB900005057F1 /* DashboardWinnerTableViewCell.h */,
+				8AABB4CE1B1DB900005057F1 /* DashboardWinnerTableViewCell.m */,
+				8AABB4CF1B1DB900005057F1 /* DashboardWinnerTableViewCell.xib */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -508,10 +585,12 @@
 				8AABB4911B1C78ED005057F1 /* 004_plus.jpg in Resources */,
 				8AABB4981B1C78ED005057F1 /* 001_6plus_facebookbutton.png in Resources */,
 				8AABB4A81B1C78ED005057F1 /* 005_plus_backbutton.png in Resources */,
+				8AABB4D11B1DB900005057F1 /* DashboardWinnerTableViewCell.xib in Resources */,
 				8ACB49901B1C3CB1007575FB /* DashboardViewController.xib in Resources */,
 				8AABB4A11B1C78ED005057F1 /* 002_6plus_winner_selected.png in Resources */,
 				8AABB4A31B1C78ED005057F1 /* 003_plus_profile_selcted.png in Resources */,
 				8A648AE61B1C0AD100B14575 /* Main.storyboard in Resources */,
+				8AABB4CC1B1DAC09005057F1 /* sample003.png in Resources */,
 				8AABB49D1B1C78ED005057F1 /* 002_6plus_list_nonselected.png in Resources */,
 				8AABB4261B1C5567005057F1 /* OpenSans-Light.ttf in Resources */,
 				8AABB4A21B1C78ED005057F1 /* 003_plus_profile_nonselcted.png in Resources */,
@@ -519,6 +598,8 @@
 				8AABB49E1B1C78ED005057F1 /* 002_6plus_list_selected.png in Resources */,
 				8AABB4931B1C78ED005057F1 /* 006_6plus.jpg in Resources */,
 				8AABB4A91B1C78ED005057F1 /* 007_6plus_longinputbar.png in Resources */,
+				8AABB4B21B1CBFE6005057F1 /* CustomNavBar.xib in Resources */,
+				8AABB4C51B1DA247005057F1 /* sample001.png in Resources */,
 				8AABB4201B1C5567005057F1 /* LICENSE.txt in Resources */,
 				8AABB4271B1C5567005057F1 /* OpenSans-LightItalic.ttf in Resources */,
 				8AABB4971B1C78ED005057F1 /* 001_6plus_biglogo.png in Resources */,
@@ -526,15 +607,18 @@
 				8AABB4A51B1C78ED005057F1 /* 003_plus_qr_selected.png in Resources */,
 				8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */,
 				8AABB4A01B1C78ED005057F1 /* 002_6plus_winner_nonselected.png in Resources */,
+				8AABB4B81B1D5760005057F1 /* QRScannerViewController.xib in Resources */,
 				8AABB49B1B1C78ED005057F1 /* 001_6plus_whitebutton.png in Resources */,
 				8AABB4921B1C78ED005057F1 /* 005_plus.jpg in Resources */,
 				8AABB4991B1C78ED005057F1 /* 001_6plus_googlebutton.png in Resources */,
 				8AABB4AD1B1C78ED005057F1 /* 001_6plus_biglogo.png in Resources */,
 				8AABB4AC1B1C78ED005057F1 /* 001_6plus_background.png in Resources */,
 				8AABB4951B1C78ED005057F1 /* 008_6plus.jpg in Resources */,
+				8AABB4C61B1DA247005057F1 /* sample002.png in Resources */,
 				8AABB4A71B1C78ED005057F1 /* 003_plus_setting_selected.png in Resources */,
 				8AABB4AA1B1C78ED005057F1 /* 007_6plus_searchicon.png in Resources */,
 				8A648AEB1B1C0AD100B14575 /* LaunchScreen.xib in Resources */,
+				8AABB4BD1B1D8804005057F1 /* MenuSelectionCVCell.xib in Resources */,
 				8ACB49801B1C333E007575FB /* MenuTableViewCell.xib in Resources */,
 				8AABB49F1B1C78ED005057F1 /* 002_6plus_qticheaderlogo.png in Resources */,
 				8AABB49C1B1C78ED005057F1 /* 002_6plus_burger_icon.png in Resources */,
@@ -573,13 +657,19 @@
 				8A648AE31B1C0AD100B14575 /* ViewController.m in Sources */,
 				8A648B091B1C0FCA00B14575 /* MFSideMenuContainerViewController.m in Sources */,
 				8A648B0A1B1C0FCA00B14575 /* MFSideMenuShadow.m in Sources */,
+				8AABB4C11B1D8A76005057F1 /* Utils.m in Sources */,
 				8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				8AABB4D01B1DB900005057F1 /* DashboardWinnerTableViewCell.m in Sources */,
 				8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */,
 				8ACB498F1B1C3CB1007575FB /* DashboardViewController.m in Sources */,
 				8ACB49941B1C3E86007575FB /* DashboardTableViewCell.m in Sources */,
 				8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */,
+				8AABB4CA1B1DA8E8005057F1 /* MovieClass.m in Sources */,
+				8AABB4B71B1D5760005057F1 /* QRScannerViewController.m in Sources */,
 				8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */,
 				8A648AE01B1C0AD100B14575 /* AppDelegate.m in Sources */,
+				8AABB4BC1B1D8804005057F1 /* MenuSelectionCVCell.m in Sources */,
+				8AABB4B01B1CBFCE005057F1 /* CustomNavBar.m in Sources */,
 				8ACB49831B1C33A9007575FB /* MenuTableViewCell.m in Sources */,
 				8A648ADD1B1C0AD100B14575 /* main.m in Sources */,
 			);
@@ -707,6 +797,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PrefixHeader.pch";
 				INFOPLIST_FILE = MovieCMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -717,6 +809,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PrefixHeader.pch";
 				INFOPLIST_FILE = MovieCMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

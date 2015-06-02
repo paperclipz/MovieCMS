@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DashboardViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface DashboardViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
+@property (strong, nonatomic) IBOutlet UICollectionView *ibCVSelection;
 
+@property (strong, nonatomic) IBOutlet UITableView *ibTblWinner;
 
 @end

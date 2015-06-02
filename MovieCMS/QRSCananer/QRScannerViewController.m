@@ -1,23 +1,21 @@
 //
-//  ProfileViewController.m
+//  QRScannerViewController.m
 //  MovieCMS
 //
-//  Created by Paperclipz on 6/1/15.
+//  Created by Paperclipz on 6/2/15.
 //  Copyright (c) 2015 AppDesignStudio. All rights reserved.
 //
 
-#import "ProfileViewController.h"
+#import "QRScannerViewController.h"
 
-@interface ProfileViewController ()
+@interface QRScannerViewController ()
 
 @end
 
-@implementation ProfileViewController
+@implementation QRScannerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-
     // Do any additional setup after loading the view from its nib.
 }
 

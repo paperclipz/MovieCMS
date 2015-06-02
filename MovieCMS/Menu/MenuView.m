@@ -41,7 +41,6 @@
 
 -(void)initSelfView
 {
-    NSLog(@"MenuView.h initSelfView");
 }
 
 -(void)initTableViewDelegate :(id)delegate
