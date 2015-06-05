@@ -12,7 +12,9 @@
 #import "ProfileViewController.h"
 #import "DashboardViewController.h"
 #import "QRScannerViewController.h"
-
+#import "MasterViewController.h"
+//#import "MovieCMS-Swift.h"
+#import "LoginViewController.h"
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) MFSideMenuContainerViewController *mfSideMenuContainerViewController;
@@ -33,6 +35,10 @@
 @property (strong, nonatomic) UINavigationController *navQRScannerViewController;
 
 @property (strong, nonatomic) QRScannerViewController *qrScannerViewController;
+
+@property (strong, nonatomic) UINavigationController *navLoginViewController;
+
+@property (strong, nonatomic) LoginViewController *loginViewController;
 
 @end
 

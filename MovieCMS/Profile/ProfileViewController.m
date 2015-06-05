@@ -10,13 +10,13 @@
 
 @interface ProfileViewController ()
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *ibArrTextField;
-@property (strong, nonatomic) IBOutlet UIButton *ibBtnMenu;
+@property (strong, nonatomic) IBOutlet UIButton *ibBtnBack;
 @property (assign, nonatomic) BOOL isEditing;
-
 
 @end
 
 @implementation ProfileViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,11 +27,27 @@
 -(void)initSelfView
 {
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-    [self.ibBtnMenu setTitle:@"" forState:UIControlStateNormal];
-    [self.ibBtnMenu addTarget:self action:@selector(toggleMenuOpen) forControlEvents: UIControlEventTouchDown];
+    [self.ibBtnBack setTitle:@"" forState:UIControlStateNormal];
+    [self.ibBtnBack addTarget:self action:@selector(btnBackClicked:) forControlEvents: UIControlEventTouchDown];
     
 
 }
+
+-(IBAction)btnBackClicked:(id)sender
+{
+    
+    
+    
+    CATransition* transition = [CATransition animation];
+    
+    transition.duration = 0.3;
+    transition.type = kCATransitionFade;
+    
+    [[self navigationController].view.layer addAnimation:transition forKey:kCATransition];
+    [self.navigationController popViewControllerAnimated:NO];
+
+}
+
 
 -(void)makeTextFieldEditable:(BOOL)isEditable
 {
@@ -48,7 +64,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btnEditClicked:(id)sender {
-    
+
     self.isEditing = !self.isEditing;
     [self makeTextFieldEditable:self.isEditing];
     [(UIButton*)sender setTitle:self.isEditing?@"DONE":@"EDIT" forState:UIControlStateNormal];

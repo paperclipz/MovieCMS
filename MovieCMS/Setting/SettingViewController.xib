@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+            <connections>
+                <outlet property="ibLanguagePickerView" destination="NwG-L0-qag" id="C3F-B5-eX0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Za-Aq-jNO" userLabel="TopNavView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvL-C9-iDL">
+                            <rect key="frame" x="0.0" y="0.0" width="93" height="72"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="005_plus_backbutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="f7c-fs-xOl">
+                                    <rect key="frame" x="9" y="31" width="33" height="33"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="Jfb-5D-WoQ"/>
+                                        <constraint firstAttribute="width" constant="33" id="ivF-kQ-7Cv"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ne-t2-3W3" userLabel="MenuButton">
+                                    <rect key="frame" x="15" y="11" width="85" height="72"/>
+                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                    <state key="normal" title="Back">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="3ne-t2-3W3" firstAttribute="leading" secondItem="PvL-C9-iDL" secondAttribute="leading" constant="15" id="1fh-Iq-alt"/>
+                                <constraint firstItem="3ne-t2-3W3" firstAttribute="trailing" secondItem="PvL-C9-iDL" secondAttribute="trailingMargin" constant="15" id="CwY-jH-b5Z"/>
+                                <constraint firstAttribute="bottom" secondItem="3ne-t2-3W3" secondAttribute="bottom" constant="-11" id="FQi-t7-lcS"/>
+                                <constraint firstItem="f7c-fs-xOl" firstAttribute="leading" secondItem="PvL-C9-iDL" secondAttribute="leading" constant="9" id="IGO-4d-3bc"/>
+                                <constraint firstItem="f7c-fs-xOl" firstAttribute="top" secondItem="PvL-C9-iDL" secondAttribute="top" constant="31" id="cE2-3F-c5P"/>
+                                <constraint firstItem="f7c-fs-xOl" firstAttribute="centerY" secondItem="3ne-t2-3W3" secondAttribute="centerY" id="gcU-OE-t8W"/>
+                                <constraint firstItem="3ne-t2-3W3" firstAttribute="top" secondItem="PvL-C9-iDL" secondAttribute="top" constant="11" id="mdN-7x-q6h"/>
+                                <constraint firstAttribute="bottom" secondItem="f7c-fs-xOl" secondAttribute="bottom" constant="10" id="nzv-TL-0TH"/>
+                                <constraint firstAttribute="trailing" secondItem="f7c-fs-xOl" secondAttribute="trailing" constant="44" id="wVb-4H-NN1"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="nzv-TL-0TH"/>
+                                    <exclude reference="wVb-4H-NN1"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002_6plus_qticheaderlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="PKc-R7-kNq">
+                            <rect key="frame" x="116" y="18" width="88" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="88" id="MMo-AQ-n49"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20784313730000001" green="0.67450980390000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="PvL-C9-iDL" firstAttribute="top" secondItem="3Za-Aq-jNO" secondAttribute="top" id="Rbn-5E-lrb"/>
+                        <constraint firstAttribute="bottom" secondItem="PKc-R7-kNq" secondAttribute="bottom" constant="3" id="UE2-1L-ord"/>
+                        <constraint firstItem="PKc-R7-kNq" firstAttribute="top" secondItem="3Za-Aq-jNO" secondAttribute="top" constant="18" id="f9h-wL-r36"/>
+                        <constraint firstItem="PKc-R7-kNq" firstAttribute="centerX" secondItem="3Za-Aq-jNO" secondAttribute="centerX" id="iWP-LB-Jvj"/>
+                        <constraint firstItem="PvL-C9-iDL" firstAttribute="leading" secondItem="3Za-Aq-jNO" secondAttribute="leading" id="pyG-sX-ChB"/>
+                        <constraint firstItem="PKc-R7-kNq" firstAttribute="leading" secondItem="PvL-C9-iDL" secondAttribute="trailing" constant="23" id="qcE-K7-pmc"/>
+                        <constraint firstAttribute="bottom" secondItem="PvL-C9-iDL" secondAttribute="bottom" id="t2Y-gc-Uoz"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTING" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydh-MM-3Cb">
+                    <rect key="frame" x="125" y="96" width="71" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="mst-PK-g8l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HV2-mb-jtx">
+                    <rect key="frame" x="28" y="126" width="264" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="5f0-G2-GgA"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NOTIFICATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYP-lE-7YD">
+                    <rect key="frame" x="28" y="173" width="116" height="21"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LANGUAGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MF-Tc-gB3">
+                    <rect key="frame" x="28" y="220" width="116" height="21"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XX6-cR-2x6">
+                    <rect key="frame" x="243" y="168" width="51" height="31"/>
+                </switch>
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwG-L0-qag">
+                    <rect key="frame" x="0.0" y="406" width="320" height="162"/>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRO-JP-3jc">
+                    <rect key="frame" x="202" y="220" width="90" height="30"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="CHINESE">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HV2-mb-jtx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="126" id="HHx-Bh-l6D"/>
+                <constraint firstItem="3Za-Aq-jNO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LwS-7X-8ld"/>
+                <constraint firstAttribute="trailing" secondItem="3Za-Aq-jNO" secondAttribute="trailing" id="StR-ME-L7j"/>
+                <constraint firstItem="HV2-mb-jtx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="VQ5-aD-4EY"/>
+                <constraint firstItem="ydh-MM-3Cb" firstAttribute="top" secondItem="3Za-Aq-jNO" secondAttribute="bottom" constant="24" id="gCb-7S-RmE"/>
+                <constraint firstAttribute="trailing" secondItem="HV2-mb-jtx" secondAttribute="trailing" constant="28" id="k56-b9-tgg"/>
+                <constraint firstAttribute="trailing" secondItem="ydh-MM-3Cb" secondAttribute="trailing" constant="124" id="kxV-Js-Pfa"/>
+                <constraint firstItem="ydh-MM-3Cb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="125" id="uzQ-Nw-yWg"/>
+                <constraint firstItem="3Za-Aq-jNO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vy9-p6-kQ8"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="002_6plus_qticheaderlogo.png" width="250" height="150"/>
+        <image name="005_plus_backbutton.png" width="100" height="100"/>
+    </resources>
+</document>

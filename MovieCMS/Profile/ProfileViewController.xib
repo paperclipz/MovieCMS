@@ -19,12 +19,13 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
             <connections>
-                <outlet property="ibBtnMenu" destination="5xv-UO-NfO" id="FiX-cI-Wt5"/>
+                <outlet property="ibBtnBack" destination="5xv-UO-NfO" id="2Sf-a6-pvd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="ibArrTextField" destination="CMF-UZ-NB2" id="Bwe-I5-J4r"/>
                 <outletCollection property="ibArrTextField" destination="9hz-HJ-Htk" id="4c5-jc-QK1"/>
@@ -45,16 +46,18 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhF-vy-oJI">
                             <rect key="frame" x="0.0" y="0.0" width="93" height="72"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002_6plus_burger_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="W03-xh-Bwy">
-                                    <rect key="frame" x="9" y="22" width="40" height="40"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="005_plus_backbutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="W03-xh-Bwy">
+                                    <rect key="frame" x="9" y="31" width="33" height="33"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="8T9-gw-Me3"/>
-                                        <constraint firstAttribute="width" constant="40" id="ZET-OZ-wHm"/>
+                                        <constraint firstAttribute="height" constant="33" id="8T9-gw-Me3"/>
+                                        <constraint firstAttribute="width" constant="33" id="ZET-OZ-wHm"/>
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xv-UO-NfO" userLabel="MenuButton">
-                                    <rect key="frame" x="0.0" y="0.0" width="85" height="72"/>
-                                    <state key="normal" title="Button">
+                                    <rect key="frame" x="15" y="11" width="85" height="72"/>
+                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                    <state key="normal" title="Back">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                 </button>
@@ -63,12 +66,12 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="W03-xh-Bwy" secondAttribute="trailing" constant="44" id="3s4-aa-bcB"/>
                                 <constraint firstItem="W03-xh-Bwy" firstAttribute="leading" secondItem="vhF-vy-oJI" secondAttribute="leading" constant="9" id="4Zu-z4-Ucf"/>
-                                <constraint firstItem="5xv-UO-NfO" firstAttribute="top" secondItem="vhF-vy-oJI" secondAttribute="top" id="PSh-wH-PYf"/>
+                                <constraint firstItem="5xv-UO-NfO" firstAttribute="top" secondItem="vhF-vy-oJI" secondAttribute="top" constant="11" id="PSh-wH-PYf"/>
                                 <constraint firstAttribute="bottom" secondItem="W03-xh-Bwy" secondAttribute="bottom" constant="10" id="XWK-7k-INn"/>
-                                <constraint firstItem="5xv-UO-NfO" firstAttribute="leading" secondItem="vhF-vy-oJI" secondAttribute="leading" id="aqY-yr-wA1"/>
-                                <constraint firstAttribute="bottom" secondItem="5xv-UO-NfO" secondAttribute="bottom" id="fUe-L6-j4R"/>
-                                <constraint firstItem="5xv-UO-NfO" firstAttribute="trailing" secondItem="vhF-vy-oJI" secondAttribute="trailingMargin" id="ftY-Pl-vx0"/>
-                                <constraint firstItem="W03-xh-Bwy" firstAttribute="top" secondItem="vhF-vy-oJI" secondAttribute="top" constant="22" id="gdF-Mk-EAw"/>
+                                <constraint firstItem="5xv-UO-NfO" firstAttribute="leading" secondItem="vhF-vy-oJI" secondAttribute="leading" constant="15" id="aqY-yr-wA1"/>
+                                <constraint firstAttribute="bottom" secondItem="5xv-UO-NfO" secondAttribute="bottom" constant="-11" id="fUe-L6-j4R"/>
+                                <constraint firstItem="5xv-UO-NfO" firstAttribute="trailing" secondItem="vhF-vy-oJI" secondAttribute="trailingMargin" constant="15" id="ftY-Pl-vx0"/>
+                                <constraint firstItem="W03-xh-Bwy" firstAttribute="top" secondItem="vhF-vy-oJI" secondAttribute="top" constant="31" id="gdF-Mk-EAw"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
@@ -118,13 +121,13 @@
                                 <constraint firstAttribute="width" constant="74" id="v8Q-7r-BLW"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rp-Lw-FzB">
                             <rect key="frame" x="28" y="50" width="74" height="21"/>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIRC NO." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnO-2J-pYi">
@@ -133,19 +136,19 @@
                                 <constraint firstAttribute="height" constant="21" id="D2E-0i-bew"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H/P NO." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0S-IM-qBE">
                             <rect key="frame" x="30" y="110" width="74" height="21"/>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxO-cT-hrT">
                             <rect key="frame" x="30" y="140" width="74" height="21"/>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzo-Bc-FNt">
@@ -154,7 +157,7 @@
                                 <constraint firstAttribute="height" constant="21" id="S7p-Zc-atp"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001_6plus_biglogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="vqu-dv-J1l">
@@ -300,7 +303,7 @@
                         <constraint firstAttribute="height" constant="24" id="DgP-ic-dcY"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jO-r8-XSD">
@@ -358,7 +361,7 @@
     <resources>
         <image name="001_6plus_biglogo.png" width="831" height="806"/>
         <image name="001_6plus_loginbutton.png" width="1000" height="150"/>
-        <image name="002_6plus_burger_icon.png" width="100" height="100"/>
         <image name="002_6plus_qticheaderlogo.png" width="250" height="150"/>
+        <image name="005_plus_backbutton.png" width="100" height="100"/>
     </resources>
 </document>

@@ -16,6 +16,7 @@
 
 @end
 
+
 @implementation CellObject : NSObject
 
 
@@ -40,7 +41,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self initSelfView];
-
 }
 
 -(void)initSelfView
@@ -100,17 +100,16 @@
         obj.unSelectedImage = [UIImage new];
         obj.selectedImage = [UIImage imageNamed:@"003_plus_profile_selcted"];
         obj.unSelectedImage = [UIImage imageNamed:@"003_plus_profile_nonselcted.png"];
-        obj.title =@"PROFILE";
+        obj.title = [[LanguageManager sharedManager] languageSelectedStringForKey:@"PROFILE"];
         
         [_arrMenuList addObject:obj];
-        
         
         CellObject* obj2 = [CellObject new];
         obj2.selectedImage = [UIImage new];
         obj2.unSelectedImage = [UIImage new];
         obj2.selectedImage = [UIImage imageNamed:@"003_plus_qr_selected.png"];
         obj2.unSelectedImage = [UIImage imageNamed:@"003_plus_qr_nonselected.png"];
-        obj2.title =@"QR SCANNER";
+        obj2.title = [[LanguageManager sharedManager] languageSelectedStringForKey:@"QR SCANNER"];
         
         [_arrMenuList addObject:obj2];
         
@@ -120,7 +119,7 @@
         obj3.unSelectedImage = [UIImage new];
         obj3.selectedImage = [UIImage imageNamed:@"003_plus_setting_selected.png"];
         obj3.unSelectedImage = [UIImage imageNamed:@"003_plus_setting_nonselected.png"];
-        obj3.title =@"SETTING";
+        obj3.title = [[LanguageManager sharedManager] languageSelectedStringForKey:@"SETTING"];
         
         [_arrMenuList addObject:obj3];
         

@@ -21,10 +21,7 @@
     UIView *imageView = [[UIView alloc] init];
     imageView.backgroundColor = [UIColor colorWithRed:(48/255.0) green:(48/255.0) blue:(48/255.0) alpha:1];
 }
--(void)ggaaa
-{
 
-}
 @end
 @implementation ViewController
 
@@ -48,7 +45,6 @@
 -(void)menuClosed
 {
     [self.mfSideMenuContainerViewController setMenuState:MFSideMenuStateClosed];
-    
 }
 
 -(void)initSelfView
@@ -59,7 +55,9 @@
     [self.mfSideMenuContainerViewController setLeftMenuViewController:self.menuViewController];
     
     [self.view addSubview:self.mfSideMenuContainerViewController.view];
-    [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
+
+    //TODO: Change the center view controller to set default loading screen
+    [self.mfSideMenuContainerViewController setCenterViewController:self.navDashboardViewController];
 
 }
 
@@ -142,22 +140,54 @@
     return _qrScannerViewController;
 }
 
+#pragma mark -- LOGIN
+-(UINavigationController*)navLoginViewController
+{
+    if(!_navLoginViewController)
+    {
+        _navLoginViewController = [[UINavigationController alloc]initWithRootViewController:self.loginViewController];
+    }
+    return _navLoginViewController;
+}
+
+-(LoginViewController*)loginViewController{
+    if(!_loginViewController)
+    {
+        _loginViewController = [LoginViewController new];
+        
+        __weak typeof (self)weakSelf = self;
+        _loginViewController.performLoginBlock =^{
+           
+            //[weakSelf didSelectMenuAtIndex:<#(int)#>]
+
+            
+        };
+    }
+    return _loginViewController;
+}
+
+
 
 -(void)didSelectMenuAtIndex:(int)index
 {
-    [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
 
+    [self.dashboardViewController.navigationController popToRootViewControllerAnimated:false];
     switch (index) {
-        case 0:
-            [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
+        case 0://profile
+            [self.dashboardViewController.navigationController pushViewController:self.profileViewController animated:false];
+           // [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
 
             break;
-        case 1:
-            [self.mfSideMenuContainerViewController setCenterViewController:self.qrScannerViewController];
+        case 1://qr scanner
+            [self.dashboardViewController.navigationController pushViewController:self.qrScannerViewController animated:false];
+
+           // [self.mfSideMenuContainerViewController setCenterViewController:self.navQRScannerViewController];
 
             break;
         case 2:
-            [self.mfSideMenuContainerViewController setCenterViewController:self.navDashboardViewController];
+            //[self.dashboardViewController.navigationController pushViewController:self.dashboardViewController animated:false];
+
+          //  [self.mfSideMenuContainerViewController setCenterViewController:self.navDashboardViewController];
 
             break;
             

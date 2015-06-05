@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MenuView.h"
+#import "MovieCMS-Swift.h"
 
 typedef void (^DidSelectMenuAtIndexBlock)(int index);
 @interface MenuViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>

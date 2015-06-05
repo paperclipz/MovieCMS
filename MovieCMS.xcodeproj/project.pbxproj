@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0563701B2025CB008B7061 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A05636E1B2025CB008B7061 /* LoginViewController.xib */; };
+		8A25EB551B1EF16D0054495D /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A25EB541B1EF16D0054495D /* LanguageManager.m */; };
+		8A25EB761B1F03B70054495D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A25EB6E1B1F00C60054495D /* Localizable.strings */; };
+		8A25EB781B1F04520054495D /* LangManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25EB771B1F04520054495D /* LangManager.swift */; };
 		8A648ADD1B1C0AD100B14575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648ADC1B1C0AD100B14575 /* main.m */; };
 		8A648AE01B1C0AD100B14575 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648ADF1B1C0AD100B14575 /* AppDelegate.m */; };
 		8A648AE31B1C0AD100B14575 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648AE21B1C0AD100B14575 /* ViewController.m */; };
@@ -17,6 +21,9 @@
 		8A648B091B1C0FCA00B14575 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648B041B1C0FCA00B14575 /* MFSideMenuContainerViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8A648B0A1B1C0FCA00B14575 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648B061B1C0FCA00B14575 /* MFSideMenuShadow.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648B081B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m */; };
+		8A8349111B20428900CDD542 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8349101B20428900CDD542 /* LoginViewController.m */; };
+		8A8349161B20B8BD00CDD542 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8349141B20B8BD00CDD542 /* SettingViewController.m */; };
+		8A8349171B20B8BD00CDD542 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8349151B20B8BD00CDD542 /* SettingViewController.xib */; };
 		8AABB4201B1C5567005057F1 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4151B1C5567005057F1 /* LICENSE.txt */; };
 		8AABB4211B1C5567005057F1 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4161B1C5567005057F1 /* OpenSans-Bold.ttf */; };
 		8AABB4221B1C5567005057F1 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4171B1C5567005057F1 /* OpenSans-BoldItalic.ttf */; };
@@ -75,7 +82,6 @@
 		8AABB4D01B1DB900005057F1 /* DashboardWinnerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4CE1B1DB900005057F1 /* DashboardWinnerTableViewCell.m */; };
 		8AABB4D11B1DB900005057F1 /* DashboardWinnerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4CF1B1DB900005057F1 /* DashboardWinnerTableViewCell.xib */; };
 		8AABB4D41B1DC0E4005057F1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4D31B1DC0E4005057F1 /* MasterViewController.m */; };
-		8AABB4DC1B1E0657005057F1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4DE1B1E0657005057F1 /* Localizable.strings */; };
 		8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49761B1C2B96007575FB /* MenuViewController.m */; };
 		8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB497B1B1C2C15007575FB /* MenuView.m */; };
 		8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB497D1B1C2C23007575FB /* MenuView.xib */; };
@@ -100,6 +106,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A05636E1B2025CB008B7061 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Login/LoginViewController.xib; sourceTree = "<group>"; };
+		8A25EB4D1B1EE5180054495D /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Main.strings; sourceTree = "<group>"; };
+		8A25EB4E1B1EE5180054495D /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8A25EB501B1EE6440054495D /* MovieCMS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieCMS-Bridging-Header.h"; sourceTree = "<group>"; };
+		8A25EB531B1EF16D0054495D /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LanguageManager.h; path = Language/LanguageManager.h; sourceTree = "<group>"; };
+		8A25EB541B1EF16D0054495D /* LanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LanguageManager.m; path = Language/LanguageManager.m; sourceTree = "<group>"; };
+		8A25EB561B1EFC5A0054495D /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Main.strings"; sourceTree = "<group>"; };
+		8A25EB571B1EFC5A0054495D /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8A25EB6D1B1F00C60054495D /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8A25EB701B1F00C80054495D /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A25EB741B1F011B0054495D /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A25EB771B1F04520054495D /* LangManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LangManager.swift; path = Language/LangManager.swift; sourceTree = "<group>"; };
 		8A648AD71B1C0AD100B14575 /* MovieCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A648ADB1B1C0AD100B14575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A648ADC1B1C0AD100B14575 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +138,11 @@
 		8A648B061B1C0FCA00B14575 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
 		8A648B071B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
 		8A648B081B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		8A83490F1B20428900CDD542 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
+		8A8349101B20428900CDD542 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
+		8A8349131B20B8BD00CDD542 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Setting/SettingViewController.h; sourceTree = "<group>"; };
+		8A8349141B20B8BD00CDD542 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Setting/SettingViewController.m; sourceTree = "<group>"; };
+		8A8349151B20B8BD00CDD542 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Setting/SettingViewController.xib; sourceTree = "<group>"; };
 		8AABB4151B1C5567005057F1 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		8AABB4161B1C5567005057F1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		8AABB4171B1C5567005057F1 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -186,13 +209,8 @@
 		8AABB4CF1B1DB900005057F1 /* DashboardWinnerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashboardWinnerTableViewCell.xib; path = Dashboard/DashboardWinnerTableViewCell.xib; sourceTree = "<group>"; };
 		8AABB4D21B1DC0E4005057F1 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		8AABB4D31B1DC0E4005057F1 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		8AABB4DD1B1E0657005057F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8AABB4E11B1E0A7B005057F1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		8AABB4E21B1E0A7B005057F1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		8AABB4E31B1E0A7B005057F1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8AABB4E41B1E0A85005057F1 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Main.strings; sourceTree = "<group>"; };
 		8AABB4E51B1E0A85005057F1 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		8AABB4E61B1E0A85005057F1 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8ACB49751B1C2B96007575FB /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Menu/MenuViewController.h; sourceTree = "<group>"; };
 		8ACB49761B1C2B96007575FB /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Menu/MenuViewController.m; sourceTree = "<group>"; };
 		8ACB497A1B1C2C15007575FB /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Menu/MenuView.h; sourceTree = "<group>"; };
@@ -230,10 +248,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A25EB591B1EFCAB0054495D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AABB4D91B1E0610005057F1 /* Language */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		8A648ACE1B1C0AD100B14575 = {
 			isa = PBXGroup;
 			children = (
 				8A648AD91B1C0AD100B14575 /* MovieCMS */,
+				8A25EB591B1EFCAB0054495D /* Resources */,
 				8A648B001B1C0FB500B14575 /* Plugin */,
 				8A648AF31B1C0AD100B14575 /* MovieCMSTests */,
 				8A648AD81B1C0AD100B14575 /* Products */,
@@ -275,7 +302,6 @@
 		8A648ADA1B1C0AD100B14575 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8AABB4D91B1E0610005057F1 /* Language */,
 				8AABB4C21B1D8C21005057F1 /* PrefixHeader.pch */,
 				8AABB46B1B1C78ED005057F1 /* Flow */,
 				8AABB4741B1C78ED005057F1 /* icon */,
@@ -327,9 +353,22 @@
 			path = MovieCMS/MFSideMenu;
 			sourceTree = "<group>";
 		};
+		8A8349121B20B85B00CDD542 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				8A8349131B20B8BD00CDD542 /* SettingViewController.h */,
+				8A8349141B20B8BD00CDD542 /* SettingViewController.m */,
+				8A8349151B20B8BD00CDD542 /* SettingViewController.xib */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		8AABB3D31B1C491E005057F1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8A83490F1B20428900CDD542 /* LoginViewController.h */,
+				8A8349101B20428900CDD542 /* LoginViewController.m */,
+				8A05636E1B2025CB008B7061 /* LoginViewController.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -461,9 +500,14 @@
 		8AABB4D91B1E0610005057F1 /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				8AABB4DE1B1E0657005057F1 /* Localizable.strings */,
+				8A25EB501B1EE6440054495D /* MovieCMS-Bridging-Header.h */,
+				8A25EB531B1EF16D0054495D /* LanguageManager.h */,
+				8A25EB541B1EF16D0054495D /* LanguageManager.m */,
+				8A25EB6E1B1F00C60054495D /* Localizable.strings */,
+				8A25EB771B1F04520054495D /* LangManager.swift */,
 			);
 			name = Language;
+			path = MovieCMS;
 			sourceTree = "<group>";
 		};
 		8ACB49741B1C2B60007575FB /* NavigationMenu */ = {
@@ -484,6 +528,7 @@
 		8ACB49841B1C3932007575FB /* MenuItem */ = {
 			isa = PBXGroup;
 			children = (
+				8A8349121B20B85B00CDD542 /* Setting */,
 				8AABB4B31B1D5736005057F1 /* QRScanner */,
 				8ACB498B1B1C3C7F007575FB /* Dashboard */,
 				8ACB498A1B1C3C70007575FB /* Profile */,
@@ -569,6 +614,7 @@
 				TargetAttributes = {
 					8A648AD61B1C0AD100B14575 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 2YT7384LQS;
 					};
 					8A648AEF1B1C0AD100B14575 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -581,10 +627,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
-				"zh-Hans",
 				ms,
+				zh,
+				"en-US",
 			);
 			mainGroup = 8A648ACE1B1C0AD100B14575;
 			productRefGroup = 8A648AD81B1C0AD100B14575 /* Products */;
@@ -602,6 +648,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A25EB761B1F03B70054495D /* Localizable.strings in Resources */,
 				8AABB42C1B1C7783005057F1 /* snsd_genie.jpg in Resources */,
 				8ACB49891B1C3966007575FB /* ProfileViewController.xib in Resources */,
 				8AABB4A61B1C78ED005057F1 /* 003_plus_setting_nonselected.png in Resources */,
@@ -622,12 +669,12 @@
 				8AABB49E1B1C78ED005057F1 /* 002_6plus_list_selected.png in Resources */,
 				8AABB4931B1C78ED005057F1 /* 006_6plus.jpg in Resources */,
 				8AABB4A91B1C78ED005057F1 /* 007_6plus_longinputbar.png in Resources */,
+				8A8349171B20B8BD00CDD542 /* SettingViewController.xib in Resources */,
 				8AABB4B21B1CBFE6005057F1 /* CustomNavBar.xib in Resources */,
 				8AABB4C51B1DA247005057F1 /* sample001.png in Resources */,
 				8AABB4201B1C5567005057F1 /* LICENSE.txt in Resources */,
 				8AABB4271B1C5567005057F1 /* OpenSans-LightItalic.ttf in Resources */,
 				8AABB4971B1C78ED005057F1 /* 001_6plus_biglogo.png in Resources */,
-				8AABB4DC1B1E0657005057F1 /* Localizable.strings in Resources */,
 				8AABB4901B1C78ED005057F1 /* 003_plus.jpg in Resources */,
 				8AABB4A51B1C78ED005057F1 /* 003_plus_qr_selected.png in Resources */,
 				8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */,
@@ -638,6 +685,7 @@
 				8AABB4991B1C78ED005057F1 /* 001_6plus_googlebutton.png in Resources */,
 				8AABB4AD1B1C78ED005057F1 /* 001_6plus_biglogo.png in Resources */,
 				8AABB4AC1B1C78ED005057F1 /* 001_6plus_background.png in Resources */,
+				8A0563701B2025CB008B7061 /* LoginViewController.xib in Resources */,
 				8AABB4951B1C78ED005057F1 /* 008_6plus.jpg in Resources */,
 				8AABB4C61B1DA247005057F1 /* sample002.png in Resources */,
 				8AABB4A71B1C78ED005057F1 /* 003_plus_setting_selected.png in Resources */,
@@ -683,20 +731,24 @@
 				8A648B091B1C0FCA00B14575 /* MFSideMenuContainerViewController.m in Sources */,
 				8A648B0A1B1C0FCA00B14575 /* MFSideMenuShadow.m in Sources */,
 				8AABB4C11B1D8A76005057F1 /* Utils.m in Sources */,
+				8A25EB781B1F04520054495D /* LangManager.swift in Sources */,
 				8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				8AABB4D01B1DB900005057F1 /* DashboardWinnerTableViewCell.m in Sources */,
 				8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */,
 				8ACB498F1B1C3CB1007575FB /* DashboardViewController.m in Sources */,
 				8ACB49941B1C3E86007575FB /* DashboardTableViewCell.m in Sources */,
+				8A8349161B20B8BD00CDD542 /* SettingViewController.m in Sources */,
 				8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */,
 				8AABB4CA1B1DA8E8005057F1 /* MovieClass.m in Sources */,
 				8AABB4B71B1D5760005057F1 /* QRScannerViewController.m in Sources */,
 				8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */,
 				8A648AE01B1C0AD100B14575 /* AppDelegate.m in Sources */,
 				8AABB4BC1B1D8804005057F1 /* MenuSelectionCVCell.m in Sources */,
+				8A25EB551B1EF16D0054495D /* LanguageManager.m in Sources */,
 				8AABB4B01B1CBFCE005057F1 /* CustomNavBar.m in Sources */,
 				8ACB49831B1C33A9007575FB /* MenuTableViewCell.m in Sources */,
 				8A648ADD1B1C0AD100B14575 /* main.m in Sources */,
+				8A8349111B20428900CDD542 /* LoginViewController.m in Sources */,
 				8AABB4D41B1DC0E4005057F1 /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,12 +772,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8A25EB6E1B1F00C60054495D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A25EB6D1B1F00C60054495D /* en-US */,
+				8A25EB701B1F00C80054495D /* ms */,
+				8A25EB741B1F011B0054495D /* zh */,
+			);
+			name = Localizable.strings;
+			path = MovieCMS;
+			sourceTree = SOURCE_ROOT;
+		};
 		8A648AE41B1C0AD100B14575 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8A648AE51B1C0AD100B14575 /* Base */,
-				8AABB4E11B1E0A7B005057F1 /* zh-Hans */,
 				8AABB4E41B1E0A85005057F1 /* ms */,
+				8A25EB4D1B1EE5180054495D /* zh */,
+				8A25EB561B1EFC5A0054495D /* en-US */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -734,20 +798,11 @@
 			isa = PBXVariantGroup;
 			children = (
 				8A648AEA1B1C0AD100B14575 /* Base */,
-				8AABB4E21B1E0A7B005057F1 /* zh-Hans */,
 				8AABB4E51B1E0A85005057F1 /* ms */,
+				8A25EB4E1B1EE5180054495D /* zh */,
+				8A25EB571B1EFC5A0054495D /* en-US */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		8AABB4DE1B1E0657005057F1 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AABB4DD1B1E0657005057F1 /* en */,
-				8AABB4E31B1E0A7B005057F1 /* zh-Hans */,
-				8AABB4E61B1E0A85005057F1 /* ms */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -837,11 +892,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucky8 Technology Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucky8 Technology Inc.";
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PrefixHeader.pch";
 				INFOPLIST_FILE = MovieCMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8f961f42-f9fc-419f-b6a2-b6e8d6909504";
+				SWIFT_OBJC_BRIDGING_HEADER = "MovieCMS/MovieCMS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -849,11 +911,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucky8 Technology Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucky8 Technology Inc.";
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PrefixHeader.pch";
 				INFOPLIST_FILE = MovieCMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8f961f42-f9fc-419f-b6a2-b6e8d6909504";
+				SWIFT_OBJC_BRIDGING_HEADER = "MovieCMS/MovieCMS-Bridging-Header.h";
 			};
 			name = Release;
 		};

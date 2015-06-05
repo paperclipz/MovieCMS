@@ -10,5 +10,24 @@
 #import <UIKit/UIKit.h>
 
 @interface Utils : NSObject
+
+typedef enum
+{
+    ENGLISH = 1,
+    MALAY = 2,
+    CHINESE = 3
+} Language;
+
+typedef enum
+{
+    MenuType_Login = 1,
+    MenuType_Profile = 2,
+    MenuType_QRCode = 3,
+    MenuType_Setting = 4,
+    MenuType_Dashboard
+} MenuType;
+
 +(UIColor*)getProjectColor;
++(float)getKeyboardHeight;
+
 @end
