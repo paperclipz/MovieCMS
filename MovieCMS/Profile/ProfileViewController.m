@@ -29,23 +29,16 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     [self.ibBtnBack setTitle:@"" forState:UIControlStateNormal];
     [self.ibBtnBack addTarget:self action:@selector(btnBackClicked:) forControlEvents: UIControlEventTouchDown];
-    
+    for (int i = 0; i<self.ibArrTextField.count; i++) {
+        UITextField* temp = self.ibArrTextField[i];
+        temp.delegate = self;
 
+    }
 }
 
 -(IBAction)btnBackClicked:(id)sender
 {
-    
-    
-    
-    CATransition* transition = [CATransition animation];
-    
-    transition.duration = 0.3;
-    transition.type = kCATransitionFade;
-    
-    [[self navigationController].view.layer addAnimation:transition forKey:kCATransition];
-    [self.navigationController popViewControllerAnimated:NO];
-
+    [[self addAnimation:kCATransitionFade].navigationController popViewControllerAnimated:NO];
 }
 
 
@@ -69,7 +62,11 @@
     [self makeTextFieldEditable:self.isEditing];
     [(UIButton*)sender setTitle:self.isEditing?@"DONE":@"EDIT" forState:UIControlStateNormal];
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 /*
 #pragma mark - Navigation
 

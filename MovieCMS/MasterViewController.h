@@ -9,7 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "UIViewController+MFSideMenuAdditions.h"
 
+
+
+
 @interface MasterViewController : UIViewController
 -(void)toggleMenuOpen;
+
+@end
+
+@interface MasterViewController(Additions)
+
+-(MasterViewController*)addAnimation:(NSString*)transitionType;
 
 @end

@@ -100,7 +100,7 @@
         obj.unSelectedImage = [UIImage new];
         obj.selectedImage = [UIImage imageNamed:@"003_plus_profile_selcted"];
         obj.unSelectedImage = [UIImage imageNamed:@"003_plus_profile_nonselcted.png"];
-        obj.title = [[LanguageManager sharedManager] languageSelectedStringForKey:@"PROFILE"];
+        obj.title = [[LanguageManager sharedManager] languageSelectedStringForKey:[Utils isLogin]?@"PROFILE":@"LOGIN"];
         
         [_arrMenuList addObject:obj];
         
@@ -129,6 +129,13 @@
     return _arrMenuList;
 }
 
+-(void)menuListDidChangeFromLogin
+{
+    CellObject* temp = self.arrMenuList[0];
+    temp.title = [[LanguageManager sharedManager] languageSelectedStringForKey:@"PROFILE"];
+    //[self.arrMenuList replaceObjectAtIndex:0 withObject:temp];
+    [self.menuView.ibTableView reloadData];
+}
 /*
 #pragma mark - Navigation
 

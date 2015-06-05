@@ -7,6 +7,10 @@
 //
 
 #import "Utils.h"
+
+static BOOL isLogin = NO;
+
+
 @implementation Utils
 
 +(UIColor*)getProjectColor
@@ -27,5 +31,14 @@
 
   }
     
+}
+
++(void)setIsLogin:(BOOL)flag
+{
+    isLogin = flag;
+}
++(BOOL)isLogin
+{
+    return isLogin;
 }
 @end

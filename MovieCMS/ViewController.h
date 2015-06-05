@@ -15,15 +15,14 @@
 #import "MasterViewController.h"
 //#import "MovieCMS-Swift.h"
 #import "LoginViewController.h"
+#import "SettingViewController.h"
+
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) MFSideMenuContainerViewController *mfSideMenuContainerViewController;
 
-@property (strong, nonatomic) UINavigationController *navMenuViewController;
 
 @property (strong, nonatomic) MenuViewController *menuViewController;
-
-@property (strong, nonatomic) UINavigationController *navProfileViewController;
 
 @property (strong, nonatomic) ProfileViewController *profileViewController;
 
@@ -31,14 +30,11 @@
 
 @property (strong, nonatomic) DashboardViewController *dashboardViewController;
 
-
-@property (strong, nonatomic) UINavigationController *navQRScannerViewController;
-
 @property (strong, nonatomic) QRScannerViewController *qrScannerViewController;
 
-@property (strong, nonatomic) UINavigationController *navLoginViewController;
-
 @property (strong, nonatomic) LoginViewController *loginViewController;
+
+@property (strong, nonatomic) SettingViewController *settingViewController;
 
 @end
 

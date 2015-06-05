@@ -16,6 +16,9 @@ typedef void (^DidSelectMenuAtIndexBlock)(int index);
 @property (strong, nonatomic)MenuView* menuView;
 @property (copy, nonatomic)DidSelectMenuAtIndexBlock didSelectMenuAtIndexBlock;
 
+
+-(void)menuListDidChangeFromLogin;
+
 @end
 
 

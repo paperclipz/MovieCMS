@@ -53,3 +53,16 @@
 }
 
 @end
+
+@implementation MasterViewController(Additions)
+
+-(MasterViewController*)addAnimation:(NSString*)transitionType
+{
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3;
+    transition.type = transitionType;
+    [[self navigationController].view.layer addAnimation:transition forKey:kCATransition];
+
+    return self;
+}
+@end

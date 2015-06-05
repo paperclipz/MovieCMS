@@ -25,6 +25,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 3;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return 2;
+}
+
+
+
 /*
 #pragma mark - Navigation
 

@@ -29,5 +29,7 @@ typedef enum
 
 +(UIColor*)getProjectColor;
 +(float)getKeyboardHeight;
++(BOOL)isLogin;
++(void)setIsLogin:(BOOL)flag;
 
 @end

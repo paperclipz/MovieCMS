@@ -17,12 +17,13 @@
 
 - (IBAction)btnForgotPasswordClicked:(id)sender {
     
-    if (_performLoginBlock) {
-        _performLoginBlock();
-    }
+   
 }
 - (IBAction)btnLoginClicked:(id)sender {
-    
+    if (_performLoginBlock) {
+         [self addAnimation:kCATransitionFade];
+        _performLoginBlock();
+    }
 }
 - (IBAction)btnSignupClicked:(id)sender {
     

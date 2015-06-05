@@ -40,6 +40,7 @@
    
     NSLog(@"ViewController");
     [self initSelfView];
+    
 }
 
 -(void)menuClosed
@@ -61,25 +62,16 @@
 
 }
 
--(UINavigationController*)navMenuViewController
-{
-    if(!_navMenuViewController)
-    {
-        _navMenuViewController = [[UINavigationController alloc]initWithRootViewController:self.menuViewController];
-    }
-    
-    return _navMenuViewController;
-}
 
--(UINavigationController*)navProfileViewController
-{
-    if(!_navProfileViewController)
-    {
-        _navProfileViewController = [[UINavigationController alloc]initWithRootViewController:self.profileViewController];
-    }
-    
-    return _navProfileViewController;
-}
+//-(UINavigationController*)navProfileViewController
+//{
+//    if(!_navProfileViewController)
+//    {
+//        _navProfileViewController = [[UINavigationController alloc]initWithRootViewController:self.profileViewController];
+//    }
+//    
+//    return _navProfileViewController;
+//}
 
 -(MenuViewController*)menuViewController{
     if(!_menuViewController)
@@ -110,6 +102,13 @@
     if(!_navDashboardViewController)
     {
         _navDashboardViewController = [[UINavigationController alloc]initWithRootViewController:self.dashboardViewController];
+        CATransition* transition = [CATransition animation];
+        
+        transition.duration = 0.3;
+        transition.type = kCATransitionFade;
+        
+        [_navDashboardViewController.view.layer addAnimation:transition forKey:kCATransition];
+
     }
     
     return _navDashboardViewController;
@@ -123,14 +122,14 @@
     return _dashboardViewController;
 }
 
--(UINavigationController*)navQRScannerViewController
-{
-    if(!_navQRScannerViewController)
-    {
-        _navQRScannerViewController = [[UINavigationController alloc]initWithRootViewController:self.qrScannerViewController];
-    }
-    return _navDashboardViewController;
-}
+//-(UINavigationController*)navQRScannerViewController
+//{
+//    if(!_navQRScannerViewController)
+//    {
+//        _navQRScannerViewController = [[UINavigationController alloc]initWithRootViewController:self.qrScannerViewController];
+//    }
+//    return _navDashboardViewController;
+//}
 
 -(QRScannerViewController*)qrScannerViewController{
     if(!_qrScannerViewController)
@@ -141,50 +140,64 @@
 }
 
 #pragma mark -- LOGIN
--(UINavigationController*)navLoginViewController
-{
-    if(!_navLoginViewController)
-    {
-        _navLoginViewController = [[UINavigationController alloc]initWithRootViewController:self.loginViewController];
-    }
-    return _navLoginViewController;
-}
+//-(UINavigationController*)navLoginViewController
+//{
+//    if(!_navLoginViewController)
+//    {
+//        _navLoginViewController = [[UINavigationController alloc]initWithRootViewController:self.loginViewController];
+//    }
+//    return _navLoginViewController;
+//}
 
 -(LoginViewController*)loginViewController{
     if(!_loginViewController)
     {
         _loginViewController = [LoginViewController new];
-        
         __weak typeof (self)weakSelf = self;
         _loginViewController.performLoginBlock =^{
-           
-            //[weakSelf didSelectMenuAtIndex:<#(int)#>]
-
+            Utils.isLogin = YES;
+            [weakSelf didSelectMenuAtIndex:0];
+            [weakSelf.menuViewController menuListDidChangeFromLogin];
             
         };
     }
     return _loginViewController;
 }
 
+-(SettingViewController*)settingViewController{
+    if(!_settingViewController)
+    {
+        _settingViewController = [SettingViewController new];
+
+    }
+    return _settingViewController;
+}
+
+
 
 
 -(void)didSelectMenuAtIndex:(int)index
 {
-
+    NSLog(@"didSelectMenuAtIndex = %d",index);
     [self.dashboardViewController.navigationController popToRootViewControllerAnimated:false];
     switch (index) {
         case 0://profile
-            [self.dashboardViewController.navigationController pushViewController:self.profileViewController animated:false];
-           // [self.mfSideMenuContainerViewController setCenterViewController:self.navProfileViewController];
 
+            if (Utils.isLogin) {
+                 [self.dashboardViewController.navigationController pushViewController:self.profileViewController animated:false];
+            }
+            else{
+               [self.dashboardViewController.navigationController pushViewController:self.loginViewController animated:false];
+            }
             break;
+            
         case 1://qr scanner
             [self.dashboardViewController.navigationController pushViewController:self.qrScannerViewController animated:false];
 
-           // [self.mfSideMenuContainerViewController setCenterViewController:self.navQRScannerViewController];
-
             break;
         case 2:
+            [self.dashboardViewController.navigationController pushViewController:self.settingViewController animated:false];
+            
             //[self.dashboardViewController.navigationController pushViewController:self.dashboardViewController animated:false];
 
           //  [self.mfSideMenuContainerViewController setCenterViewController:self.navDashboardViewController];
