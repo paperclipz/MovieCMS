@@ -2,7 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRScannerViewController">
             <connections>
@@ -16,35 +23,121 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2S-Hi-Nhg">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cP-p2-ovT">
-                            <rect key="frame" x="0.0" y="31" width="320" height="21"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="6cP-p2-ovT" firstAttribute="leading" secondItem="p2S-Hi-Nhg" secondAttribute="leading" id="3si-Zh-pZf"/>
-                        <constraint firstAttribute="bottom" secondItem="6cP-p2-ovT" secondAttribute="bottom" constant="20" id="J8E-dA-DHC"/>
-                        <constraint firstAttribute="trailing" secondItem="6cP-p2-ovT" secondAttribute="trailing" id="KHj-XF-UHM"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="Kjm-iB-dcd"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="72" id="cAR-5x-Pmr"/>
                         <constraint firstAttribute="height" constant="72" id="gOg-Qe-xHi"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="72" id="p5k-j6-rOk"/>
-                        <constraint firstItem="6cP-p2-ovT" firstAttribute="top" secondItem="p2S-Hi-Nhg" secondAttribute="top" constant="31" id="plX-bm-dZa"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryl-3G-Qsf" userLabel="TopNavView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ftq-kX-P0u">
+                            <rect key="frame" x="0.0" y="0.0" width="93" height="72"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="005_plus_backbutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="ufG-XZ-L0J">
+                                    <rect key="frame" x="9" y="31" width="33" height="33"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="UHN-Qp-l0l"/>
+                                        <constraint firstAttribute="width" constant="33" id="pc0-4p-dHU"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wg-9n-Klz" userLabel="MenuButton">
+                                    <rect key="frame" x="15" y="11" width="85" height="72"/>
+                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                    <state key="normal" title="Back">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnBackClicked:" destination="-1" eventType="touchUpInside" id="Zyf-kl-m4f"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="0wg-9n-Klz" firstAttribute="top" secondItem="Ftq-kX-P0u" secondAttribute="top" constant="11" id="3J1-b7-02I"/>
+                                <constraint firstItem="ufG-XZ-L0J" firstAttribute="top" secondItem="Ftq-kX-P0u" secondAttribute="top" constant="31" id="7Rc-yA-IC5"/>
+                                <constraint firstItem="ufG-XZ-L0J" firstAttribute="centerY" secondItem="0wg-9n-Klz" secondAttribute="centerY" id="9aA-oW-4PA"/>
+                                <constraint firstAttribute="bottom" secondItem="ufG-XZ-L0J" secondAttribute="bottom" constant="10" id="ITN-hJ-6xm"/>
+                                <constraint firstItem="0wg-9n-Klz" firstAttribute="trailing" secondItem="Ftq-kX-P0u" secondAttribute="trailingMargin" constant="15" id="K2f-2O-OZX"/>
+                                <constraint firstItem="0wg-9n-Klz" firstAttribute="leading" secondItem="Ftq-kX-P0u" secondAttribute="leading" constant="15" id="Que-cT-CtV"/>
+                                <constraint firstAttribute="trailing" secondItem="ufG-XZ-L0J" secondAttribute="trailing" constant="44" id="aXk-jy-V0b"/>
+                                <constraint firstItem="ufG-XZ-L0J" firstAttribute="leading" secondItem="Ftq-kX-P0u" secondAttribute="leading" constant="9" id="ewK-gJ-0on"/>
+                                <constraint firstAttribute="bottom" secondItem="0wg-9n-Klz" secondAttribute="bottom" constant="-11" id="xGW-BN-YiI"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="ITN-hJ-6xm"/>
+                                    <exclude reference="aXk-jy-V0b"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002_6plus_qticheaderlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y9H-3b-hHy">
+                            <rect key="frame" x="116" y="18" width="88" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="88" id="5DX-nQ-czl"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20784313730000001" green="0.67450980390000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Y9H-3b-hHy" secondAttribute="bottom" constant="3" id="NOP-AA-Qaw"/>
+                        <constraint firstItem="Ftq-kX-P0u" firstAttribute="top" secondItem="ryl-3G-Qsf" secondAttribute="top" id="Wd3-fF-KQY"/>
+                        <constraint firstItem="Y9H-3b-hHy" firstAttribute="leading" secondItem="Ftq-kX-P0u" secondAttribute="trailing" constant="23" id="cO5-dV-zlH"/>
+                        <constraint firstItem="Y9H-3b-hHy" firstAttribute="top" secondItem="ryl-3G-Qsf" secondAttribute="top" constant="18" id="pMk-Ek-V3c"/>
+                        <constraint firstItem="Y9H-3b-hHy" firstAttribute="centerX" secondItem="ryl-3G-Qsf" secondAttribute="centerX" id="sDQ-U0-19u"/>
+                        <constraint firstItem="Ftq-kX-P0u" firstAttribute="leading" secondItem="ryl-3G-Qsf" secondAttribute="leading" id="uu6-pd-Os2"/>
+                        <constraint firstAttribute="bottom" secondItem="Ftq-kX-P0u" secondAttribute="bottom" id="veb-KG-hjb"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR SCANNER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT1-Kl-ksb">
+                    <rect key="frame" x="108" y="94" width="105" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="9Ze-KI-l51"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ra4-l9-Lbt">
+                    <rect key="frame" x="28" y="126" width="264" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="6mQ-5N-DCh"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWT-bC-Uvd">
+                    <rect key="frame" x="137" y="313" width="46" height="30"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNextClicked:" destination="-1" eventType="touchUpInside" id="rtT-EK-s4x"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="ryl-3G-Qsf" firstAttribute="top" secondItem="p2S-Hi-Nhg" secondAttribute="top" id="36z-cw-eI6"/>
+                <constraint firstItem="ryl-3G-Qsf" firstAttribute="leading" secondItem="p2S-Hi-Nhg" secondAttribute="leading" id="A1Z-4h-eJ8"/>
+                <constraint firstItem="ra4-l9-Lbt" firstAttribute="centerX" secondItem="HT1-Kl-ksb" secondAttribute="centerX" id="MYz-GA-0Aw"/>
                 <constraint firstItem="p2S-Hi-Nhg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="O2u-WT-rMK"/>
                 <constraint firstAttribute="trailing" secondItem="p2S-Hi-Nhg" secondAttribute="trailing" id="RLl-gV-2Hz"/>
+                <constraint firstItem="ra4-l9-Lbt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="126" id="Srv-g5-UjG"/>
+                <constraint firstItem="ra4-l9-Lbt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="Xs7-b8-8Jp"/>
+                <constraint firstItem="ra4-l9-Lbt" firstAttribute="centerX" secondItem="p2S-Hi-Nhg" secondAttribute="centerX" id="bI0-GZ-4sQ"/>
+                <constraint firstItem="ra4-l9-Lbt" firstAttribute="top" secondItem="HT1-Kl-ksb" secondAttribute="bottom" constant="8" symbolic="YES" id="caY-Ef-sx0"/>
+                <constraint firstItem="ryl-3G-Qsf" firstAttribute="trailing" secondItem="p2S-Hi-Nhg" secondAttribute="trailing" id="epQ-bP-Erx"/>
                 <constraint firstItem="p2S-Hi-Nhg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qNC-XY-hMU"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="236.5" y="270.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="002_6plus_qticheaderlogo.png" width="250" height="150"/>
+        <image name="005_plus_backbutton.png" width="100" height="100"/>
+    </resources>
 </document>

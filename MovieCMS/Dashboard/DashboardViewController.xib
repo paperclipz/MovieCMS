@@ -137,6 +137,11 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="377" id="TM4-mX-Dml"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="TM4-mX-Dml"/>
+                        </mask>
+                    </variation>
                 </tableView>
                 <tableView clipsSubviews="YES" tag="99" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iBr-eS-Iin" userLabel="tblWinner">
                     <rect key="frame" x="0.0" y="191" width="320" height="377"/>
@@ -163,6 +168,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="URF-d5-pUU"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="007_6plus_searchicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="nQV-Pv-ft6">
                                         <rect key="frame" x="14" y="-2" width="36" height="31"/>
@@ -196,6 +204,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="Hjt-ym-XUp"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="007_6plus_searchicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="tfR-kb-ufe">
                                         <rect key="frame" x="14" y="-2" width="36" height="31"/>
@@ -233,6 +244,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="myd-95-WWi"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="007_6plus_searchicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mo1-24-RUs">
                                         <rect key="frame" x="14" y="-2" width="36" height="31"/>
@@ -360,6 +374,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ZFd-wD-4uO"/>
+                        </mask>
+                    </variation>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -373,24 +392,40 @@
                 <constraint firstItem="iBr-eS-Iin" firstAttribute="trailing" secondItem="PfS-8s-zT5" secondAttribute="trailing" id="DwX-xt-YWn"/>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="leading" secondItem="Zk4-hn-H48" secondAttribute="leading" id="IXd-f0-Fii"/>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="leading" secondItem="PfS-8s-zT5" secondAttribute="leading" id="NFK-St-VJS"/>
+                <constraint firstItem="PfS-8s-zT5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qow-8L-R1N"/>
+                <constraint firstItem="iBr-eS-Iin" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RJQ-6o-APJ"/>
                 <constraint firstItem="Xaz-tG-g87" firstAttribute="top" secondItem="Zk4-hn-H48" secondAttribute="bottom" id="WF1-tx-d7R"/>
+                <constraint firstItem="iBr-eS-Iin" firstAttribute="top" secondItem="Zk4-hn-H48" secondAttribute="bottom" constant="36" id="ZYh-ea-MAd"/>
+                <constraint firstAttribute="trailing" secondItem="PfS-8s-zT5" secondAttribute="trailing" id="aME-Dn-elE"/>
                 <constraint firstItem="Xaz-tG-g87" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b4G-qx-ijX"/>
                 <constraint firstAttribute="trailing" secondItem="JRx-cc-Kla" secondAttribute="trailing" id="d1P-7e-wpO"/>
                 <constraint firstItem="PfS-8s-zT5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="191" id="dMh-G2-4SU"/>
                 <constraint firstAttribute="bottom" secondItem="JRx-cc-Kla" secondAttribute="bottom" constant="496" id="fTt-EJ-aG5"/>
                 <constraint firstAttribute="bottom" secondItem="iBr-eS-Iin" secondAttribute="bottom" id="kDF-PS-VRC"/>
+                <constraint firstItem="PfS-8s-zT5" firstAttribute="top" secondItem="Zk4-hn-H48" secondAttribute="bottom" constant="36" id="kXi-iA-ES1"/>
+                <constraint firstAttribute="bottom" secondItem="iBr-eS-Iin" secondAttribute="bottom" id="l7z-qQ-ovC"/>
                 <constraint firstAttribute="bottom" secondItem="PfS-8s-zT5" secondAttribute="bottom" id="li1-cs-nU7"/>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pAI-dV-sii"/>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="trailing" secondItem="Zk4-hn-H48" secondAttribute="trailing" id="qJG-y8-pd0"/>
                 <constraint firstItem="iBr-eS-Iin" firstAttribute="top" secondItem="PfS-8s-zT5" secondAttribute="top" id="rcE-7I-dCw"/>
                 <constraint firstItem="Zk4-hn-H48" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="spJ-Oa-TpA"/>
+                <constraint firstAttribute="trailing" secondItem="iBr-eS-Iin" secondAttribute="trailing" id="u3U-Xe-LN2"/>
                 <constraint firstAttribute="trailing" secondItem="Xaz-tG-g87" secondAttribute="trailing" id="wjQ-7v-4SB"/>
                 <constraint firstItem="JRx-cc-Kla" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zAS-sW-kcg"/>
+                <constraint firstAttribute="bottom" secondItem="PfS-8s-zT5" secondAttribute="bottom" id="zSh-qK-2YZ"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="9Lz-fQ-j7t"/>
+                    <exclude reference="NFK-St-VJS"/>
                     <exclude reference="fTt-EJ-aG5"/>
+                    <exclude reference="dMh-G2-4SU"/>
+                    <exclude reference="li1-cs-nU7"/>
+                    <exclude reference="AsO-1l-y0r"/>
+                    <exclude reference="DwX-xt-YWn"/>
+                    <exclude reference="kDF-PS-VRC"/>
+                    <exclude reference="rcE-7I-dCw"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="320" y="261"/>

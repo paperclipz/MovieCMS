@@ -14,6 +14,10 @@
 @end
 
 @implementation SettingViewController
+- (IBAction)btnBackClicked:(id)sender {
+    [[self addAnimation:kCATransitionFade].navigationController popViewControllerAnimated:NO];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

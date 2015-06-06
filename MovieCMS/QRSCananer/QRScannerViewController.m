@@ -13,6 +13,15 @@
 @end
 
 @implementation QRScannerViewController
+- (IBAction)btnNextClicked:(id)sender {
+    
+    [[self addAnimation:kCATransitionFade].navigationController pushViewController:self.winnerDisplayViewController animated:NO];
+}
+- (IBAction)btnBackClicked:(id)sender {
+    
+    [[self addAnimation:kCATransitionFade].navigationController popViewControllerAnimated:NO];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +33,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(WinnerDisplayViewController*)winnerDisplayViewController
+{
+    if (!_winnerDisplayViewController) {
+        _winnerDisplayViewController = [WinnerDisplayViewController new];
+    }
+    return _winnerDisplayViewController;
+}
 /*
 #pragma mark - Navigation
 

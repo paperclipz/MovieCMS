@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *ibIVLogo;
+@property (strong, nonatomic) IBOutlet UIView *ibViewContent;
 @property (strong, nonatomic) IBOutlet UIView *ibRegisterView;
 @property (strong, nonatomic) IBOutlet UIButton *ibBtnCloseRegisterView;
 @end
@@ -36,6 +38,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initSelfView];
+    
+//    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+//    CGFloat adjusteHeight = (screenHeight - self.ibIVLogo.frame.origin.y - self.ibIVLogo.frame.size.height-self.ibViewContent.frame.size.height)/2;
+//    
+//    NSLog(@"%f == ibviewcontent ==%f",screenHeight,self.ibViewContent.frame.size.height);
+//    self.ibViewContent.frame = CGRectMake(self.ibViewContent.frame.origin.x,self.ibIVLogo.frame.origin.y+self.ibIVLogo.frame.size.height+adjusteHeight, self.ibViewContent.frame.size.width, self.ibViewContent.frame.size.height);
+  
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -96,8 +105,8 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
     
+    [super textFieldShouldReturn:textField];
     __weak typeof(self)weakSelf = self;
     [UIView animateWithDuration:1.0f animations:^{
         CGRect tempFrame = CGRectMake(0, 0, weakSelf.view.frame.size.width, weakSelf.view.frame.size.height);

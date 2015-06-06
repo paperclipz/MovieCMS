@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WinnerDisplayViewController.h"
 
-@interface QRScannerViewController : UIViewController
+@interface QRScannerViewController : MasterViewController
+
+@property (strong, nonatomic) WinnerDisplayViewController *winnerDisplayViewController;
 
 @end

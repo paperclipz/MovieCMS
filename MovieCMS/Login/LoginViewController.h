@@ -10,7 +10,7 @@
 
 typedef void (^PerformLoginBlock)(void);
 
-@interface LoginViewController : MasterViewController <UITextFieldDelegate>
+@interface LoginViewController : MasterViewController
 
 @property (copy, nonatomic)PerformLoginBlock performLoginBlock;
 @end

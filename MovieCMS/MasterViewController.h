@@ -12,7 +12,7 @@
 
 
 
-@interface MasterViewController : UIViewController
+@interface MasterViewController : UIViewController<UITextFieldDelegate>
 -(void)toggleMenuOpen;
 
 @end

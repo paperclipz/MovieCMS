@@ -3,8 +3,50 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>Pods-MovieCMS-JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovieCMS-MKNetworkKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovieCMS-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovieCMS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>24ABBD497646A1340D47233B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>283509A5A6DB5312A33E9255</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C06D908D2C9E82F31E5F04CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F179BBE8F2EA75937399966C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

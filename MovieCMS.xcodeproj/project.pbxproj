@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55140DD80538B161F091DDE4 /* libPods-MovieCMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C94BFC604D4D8708FB11DE53 /* libPods-MovieCMS.a */; };
 		8A0563701B2025CB008B7061 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A05636E1B2025CB008B7061 /* LoginViewController.xib */; };
 		8A25EB551B1EF16D0054495D /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A25EB541B1EF16D0054495D /* LanguageManager.m */; };
 		8A25EB761B1F03B70054495D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A25EB6E1B1F00C60054495D /* Localizable.strings */; };
@@ -24,6 +25,9 @@
 		8A8349111B20428900CDD542 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8349101B20428900CDD542 /* LoginViewController.m */; };
 		8A8349161B20B8BD00CDD542 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8349141B20B8BD00CDD542 /* SettingViewController.m */; };
 		8A8349171B20B8BD00CDD542 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8349151B20B8BD00CDD542 /* SettingViewController.xib */; };
+		8A83491B1B21AFC400CDD542 /* WinnerDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8349191B21AFC400CDD542 /* WinnerDisplayViewController.m */; };
+		8A83491C1B21AFC400CDD542 /* WinnerDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A83491A1B21AFC400CDD542 /* WinnerDisplayViewController.xib */; };
+		8A83491F1B22F69A00CDD542 /* WinnerDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A83491E1B22F69A00CDD542 /* WinnerDetailModel.m */; };
 		8AABB4201B1C5567005057F1 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4151B1C5567005057F1 /* LICENSE.txt */; };
 		8AABB4211B1C5567005057F1 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4161B1C5567005057F1 /* OpenSans-Bold.ttf */; };
 		8AABB4221B1C5567005057F1 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4171B1C5567005057F1 /* OpenSans-BoldItalic.ttf */; };
@@ -106,6 +110,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36F4DCF47E6A738B4219ECC3 /* Pods-MovieCMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCMS/Pods-MovieCMS.release.xcconfig"; sourceTree = "<group>"; };
 		8A05636E1B2025CB008B7061 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Login/LoginViewController.xib; sourceTree = "<group>"; };
 		8A25EB4D1B1EE5180054495D /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Main.strings; sourceTree = "<group>"; };
 		8A25EB4E1B1EE5180054495D /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -143,6 +148,11 @@
 		8A8349131B20B8BD00CDD542 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Setting/SettingViewController.h; sourceTree = "<group>"; };
 		8A8349141B20B8BD00CDD542 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Setting/SettingViewController.m; sourceTree = "<group>"; };
 		8A8349151B20B8BD00CDD542 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Setting/SettingViewController.xib; sourceTree = "<group>"; };
+		8A8349181B21AFC400CDD542 /* WinnerDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinnerDisplayViewController.h; path = QRSCananer/WinnerDisplayViewController.h; sourceTree = "<group>"; };
+		8A8349191B21AFC400CDD542 /* WinnerDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinnerDisplayViewController.m; path = QRSCananer/WinnerDisplayViewController.m; sourceTree = "<group>"; };
+		8A83491A1B21AFC400CDD542 /* WinnerDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WinnerDisplayViewController.xib; path = QRSCananer/WinnerDisplayViewController.xib; sourceTree = "<group>"; };
+		8A83491D1B22F69A00CDD542 /* WinnerDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinnerDetailModel.h; path = Models/WinnerDetailModel.h; sourceTree = "<group>"; };
+		8A83491E1B22F69A00CDD542 /* WinnerDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinnerDetailModel.m; path = Models/WinnerDetailModel.m; sourceTree = "<group>"; };
 		8AABB4151B1C5567005057F1 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		8AABB4161B1C5567005057F1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		8AABB4171B1C5567005057F1 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -228,6 +238,8 @@
 		8ACB49911B1C3E86007575FB /* DashboardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardTableViewCell.h; path = Dashboard/DashboardTableViewCell.h; sourceTree = "<group>"; };
 		8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardTableViewCell.m; path = Dashboard/DashboardTableViewCell.m; sourceTree = "<group>"; };
 		8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashboardTableViewCell.xib; path = Dashboard/DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		90CDB8E8255FCD5C14267C48 /* Pods-MovieCMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCMS/Pods-MovieCMS.debug.xcconfig"; sourceTree = "<group>"; };
+		C94BFC604D4D8708FB11DE53 /* libPods-MovieCMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MovieCMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +247,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55140DD80538B161F091DDE4 /* libPods-MovieCMS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +261,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007C2E924924F456C7E75663 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90CDB8E8255FCD5C14267C48 /* Pods-MovieCMS.debug.xcconfig */,
+				36F4DCF47E6A738B4219ECC3 /* Pods-MovieCMS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8A25EB591B1EFCAB0054495D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +286,8 @@
 				8A648B001B1C0FB500B14575 /* Plugin */,
 				8A648AF31B1C0AD100B14575 /* MovieCMSTests */,
 				8A648AD81B1C0AD100B14575 /* Products */,
+				007C2E924924F456C7E75663 /* Pods */,
+				C881F45CFF4844D98BB5DDDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -473,6 +497,9 @@
 				8AABB4B41B1D5760005057F1 /* QRScannerViewController.h */,
 				8AABB4B51B1D5760005057F1 /* QRScannerViewController.m */,
 				8AABB4B61B1D5760005057F1 /* QRScannerViewController.xib */,
+				8A8349181B21AFC400CDD542 /* WinnerDisplayViewController.h */,
+				8A8349191B21AFC400CDD542 /* WinnerDisplayViewController.m */,
+				8A83491A1B21AFC400CDD542 /* WinnerDisplayViewController.xib */,
 			);
 			name = QRScanner;
 			sourceTree = "<group>";
@@ -493,6 +520,8 @@
 			children = (
 				8AABB4C81B1DA8E8005057F1 /* MovieClass.h */,
 				8AABB4C91B1DA8E8005057F1 /* MovieClass.m */,
+				8A83491D1B22F69A00CDD542 /* WinnerDetailModel.h */,
+				8A83491E1B22F69A00CDD542 /* WinnerDetailModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -565,6 +594,14 @@
 			name = Dashboard;
 			sourceTree = "<group>";
 		};
+		C881F45CFF4844D98BB5DDDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C94BFC604D4D8708FB11DE53 /* libPods-MovieCMS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -572,9 +609,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A648AFA1B1C0AD100B14575 /* Build configuration list for PBXNativeTarget "MovieCMS" */;
 			buildPhases = (
+				9B1E3BC920B4C58B18C29423 /* Check Pods Manifest.lock */,
 				8A648AD31B1C0AD100B14575 /* Sources */,
 				8A648AD41B1C0AD100B14575 /* Frameworks */,
 				8A648AD51B1C0AD100B14575 /* Resources */,
+				B390F1908099399B2BFAB85E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -709,6 +748,7 @@
 				8AABB42A1B1C5567005057F1 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				8AABB4251B1C5567005057F1 /* OpenSans-Italic.ttf in Resources */,
 				8AABB4961B1C78ED005057F1 /* 001_6plus_background.png in Resources */,
+				8A83491C1B21AFC400CDD542 /* WinnerDisplayViewController.xib in Resources */,
 				8AABB49A1B1C78ED005057F1 /* 001_6plus_loginbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,6 +761,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B1E3BC920B4C58B18C29423 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B390F1908099399B2BFAB85E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovieCMS/Pods-MovieCMS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A648AD31B1C0AD100B14575 /* Sources */ = {
@@ -735,6 +808,7 @@
 				8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				8AABB4D01B1DB900005057F1 /* DashboardWinnerTableViewCell.m in Sources */,
 				8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */,
+				8A83491B1B21AFC400CDD542 /* WinnerDisplayViewController.m in Sources */,
 				8ACB498F1B1C3CB1007575FB /* DashboardViewController.m in Sources */,
 				8ACB49941B1C3E86007575FB /* DashboardTableViewCell.m in Sources */,
 				8A8349161B20B8BD00CDD542 /* SettingViewController.m in Sources */,
@@ -746,6 +820,7 @@
 				8AABB4BC1B1D8804005057F1 /* MenuSelectionCVCell.m in Sources */,
 				8A25EB551B1EF16D0054495D /* LanguageManager.m in Sources */,
 				8AABB4B01B1CBFCE005057F1 /* CustomNavBar.m in Sources */,
+				8A83491F1B22F69A00CDD542 /* WinnerDetailModel.m in Sources */,
 				8ACB49831B1C33A9007575FB /* MenuTableViewCell.m in Sources */,
 				8A648ADD1B1C0AD100B14575 /* main.m in Sources */,
 				8A8349111B20428900CDD542 /* LoginViewController.m in Sources */,
@@ -890,6 +965,7 @@
 		};
 		8A648AFB1B1C0AD100B14575 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90CDB8E8255FCD5C14267C48 /* Pods-MovieCMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -909,6 +985,7 @@
 		};
 		8A648AFC1B1C0AD100B14575 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F4DCF47E6A738B4219ECC3 /* Pods-MovieCMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

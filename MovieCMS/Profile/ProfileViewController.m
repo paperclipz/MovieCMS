@@ -41,7 +41,6 @@
     [[self addAnimation:kCATransitionFade].navigationController popViewControllerAnimated:NO];
 }
 
-
 -(void)makeTextFieldEditable:(BOOL)isEditable
 {
     for (int i = 0;i<self.ibArrTextField.count;i++)
@@ -62,9 +61,9 @@
     [self makeTextFieldEditable:self.isEditing];
     [(UIButton*)sender setTitle:self.isEditing?@"DONE":@"EDIT" forState:UIControlStateNormal];
 }
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    
+    [super textFieldShouldReturn:textField];
     return YES;
 }
 /*
