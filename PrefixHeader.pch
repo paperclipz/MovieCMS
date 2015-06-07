@@ -23,5 +23,6 @@
 #import "UIViewController+MFSideMenuAdditions.h"
 #import "MasterViewController.h"
 #import "LanguageManager.h"
+#import "Constant.h"
 
 #endif

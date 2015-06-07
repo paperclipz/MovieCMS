@@ -11,7 +11,6 @@
 		8A0563701B2025CB008B7061 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A05636E1B2025CB008B7061 /* LoginViewController.xib */; };
 		8A25EB551B1EF16D0054495D /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A25EB541B1EF16D0054495D /* LanguageManager.m */; };
 		8A25EB761B1F03B70054495D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A25EB6E1B1F00C60054495D /* Localizable.strings */; };
-		8A25EB781B1F04520054495D /* LangManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25EB771B1F04520054495D /* LangManager.swift */; };
 		8A648ADD1B1C0AD100B14575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648ADC1B1C0AD100B14575 /* main.m */; };
 		8A648AE01B1C0AD100B14575 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648ADF1B1C0AD100B14575 /* AppDelegate.m */; };
 		8A648AE31B1C0AD100B14575 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648AE21B1C0AD100B14575 /* ViewController.m */; };
@@ -28,6 +27,8 @@
 		8A83491B1B21AFC400CDD542 /* WinnerDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8349191B21AFC400CDD542 /* WinnerDisplayViewController.m */; };
 		8A83491C1B21AFC400CDD542 /* WinnerDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A83491A1B21AFC400CDD542 /* WinnerDisplayViewController.xib */; };
 		8A83491F1B22F69A00CDD542 /* WinnerDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A83491E1B22F69A00CDD542 /* WinnerDetailModel.m */; };
+		8A8349221B24093300CDD542 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8349211B24093300CDD542 /* Constant.m */; };
+		8A8349261B2409F500CDD542 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8349251B2409F500CDD542 /* ConnectionManager.m */; };
 		8AABB4201B1C5567005057F1 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4151B1C5567005057F1 /* LICENSE.txt */; };
 		8AABB4211B1C5567005057F1 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4161B1C5567005057F1 /* OpenSans-Bold.ttf */; };
 		8AABB4221B1C5567005057F1 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AABB4171B1C5567005057F1 /* OpenSans-BoldItalic.ttf */; };
@@ -153,6 +154,10 @@
 		8A83491A1B21AFC400CDD542 /* WinnerDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WinnerDisplayViewController.xib; path = QRSCananer/WinnerDisplayViewController.xib; sourceTree = "<group>"; };
 		8A83491D1B22F69A00CDD542 /* WinnerDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinnerDetailModel.h; path = Models/WinnerDetailModel.h; sourceTree = "<group>"; };
 		8A83491E1B22F69A00CDD542 /* WinnerDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinnerDetailModel.m; path = Models/WinnerDetailModel.m; sourceTree = "<group>"; };
+		8A8349201B24093300CDD542 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Common/Constant.h; sourceTree = "<group>"; };
+		8A8349211B24093300CDD542 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constant.m; path = Common/Constant.m; sourceTree = "<group>"; };
+		8A8349241B2409F500CDD542 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = Manager/ConnectionManager.h; sourceTree = "<group>"; };
+		8A8349251B2409F500CDD542 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = Manager/ConnectionManager.m; sourceTree = "<group>"; };
 		8AABB4151B1C5567005057F1 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		8AABB4161B1C5567005057F1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		8AABB4171B1C5567005057F1 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -283,6 +288,7 @@
 			children = (
 				8A648AD91B1C0AD100B14575 /* MovieCMS */,
 				8A25EB591B1EFCAB0054495D /* Resources */,
+				8A8349231B2409DF00CDD542 /* Manager */,
 				8A648B001B1C0FB500B14575 /* Plugin */,
 				8A648AF31B1C0AD100B14575 /* MovieCMSTests */,
 				8A648AD81B1C0AD100B14575 /* Products */,
@@ -385,6 +391,16 @@
 				8A8349151B20B8BD00CDD542 /* SettingViewController.xib */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		8A8349231B2409DF00CDD542 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8A8349241B2409F500CDD542 /* ConnectionManager.h */,
+				8A8349251B2409F500CDD542 /* ConnectionManager.m */,
+			);
+			name = Manager;
+			path = MovieCMS;
 			sourceTree = "<group>";
 		};
 		8AABB3D31B1C491E005057F1 /* Login */ = {
@@ -511,6 +527,8 @@
 				8AABB4C01B1D8A76005057F1 /* Utils.m */,
 				8AABB4D21B1DC0E4005057F1 /* MasterViewController.h */,
 				8AABB4D31B1DC0E4005057F1 /* MasterViewController.m */,
+				8A8349201B24093300CDD542 /* Constant.h */,
+				8A8349211B24093300CDD542 /* Constant.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -804,10 +822,11 @@
 				8A648B091B1C0FCA00B14575 /* MFSideMenuContainerViewController.m in Sources */,
 				8A648B0A1B1C0FCA00B14575 /* MFSideMenuShadow.m in Sources */,
 				8AABB4C11B1D8A76005057F1 /* Utils.m in Sources */,
-				8A25EB781B1F04520054495D /* LangManager.swift in Sources */,
+				8A8349221B24093300CDD542 /* Constant.m in Sources */,
 				8A648B0B1B1C0FCA00B14575 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				8AABB4D01B1DB900005057F1 /* DashboardWinnerTableViewCell.m in Sources */,
 				8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */,
+				8A8349261B2409F500CDD542 /* ConnectionManager.m in Sources */,
 				8A83491B1B21AFC400CDD542 /* WinnerDisplayViewController.m in Sources */,
 				8ACB498F1B1C3CB1007575FB /* DashboardViewController.m in Sources */,
 				8ACB49941B1C3E86007575FB /* DashboardTableViewCell.m in Sources */,

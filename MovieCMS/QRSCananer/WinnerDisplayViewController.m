@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblTFLocation;
 @property (strong, nonatomic) IBOutlet UILabel *ibTFTime;
 
+@property (strong, nonatomic) IBOutlet UIScrollView *ibSWContent;
 @property (strong,nonatomic) WinnerDetailModel* winnerModel;
 @end
 
@@ -33,6 +34,7 @@
 
 -(void)initSelfView
 {
+    self.ibSWContent.delaysContentTouches = NO;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

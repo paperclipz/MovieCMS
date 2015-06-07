@@ -18,6 +18,7 @@ typedef enum
     CHINESE = 3
 } Language;
 
+
 typedef enum
 {
     MenuType_Login = 1,
@@ -26,6 +27,11 @@ typedef enum
     MenuType_Setting = 4,
     MenuType_Dashboard
 } MenuType;
+
+typedef enum
+{
+    ServerRequestType_Login = 1
+}ServerRequestType;
 
 +(UIColor*)getProjectColor;
 +(float)getKeyboardHeight;
