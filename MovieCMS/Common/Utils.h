@@ -11,6 +11,8 @@
 
 @interface Utils : NSObject
 
+typedef void (^LanguageBlock)(void);
+
 typedef enum
 {
     ENGLISH = 1,

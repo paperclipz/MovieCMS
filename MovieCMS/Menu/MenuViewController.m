@@ -49,9 +49,18 @@
     self.view = [MenuView initializeCustomView];
     self.menuView = (MenuView*)self.view;
     [self.menuView initTableViewDelegate:self];
+    [[LanguageManager sharedManager]AddLanguage:self];
+    
+    __weak typeof (self)weakSelf =self;
+    self.languageBlock = ^{
+        [weakSelf triggerLanguageChanged];
+    };
 
 }
-
+-(void)triggerLanguageChanged
+{
+    [self.menuView.ibTableView reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -100,7 +109,7 @@
         obj.unSelectedImage = [UIImage new];
         obj.selectedImage = [UIImage imageNamed:@"003_plus_profile_selcted"];
         obj.unSelectedImage = [UIImage imageNamed:@"003_plus_profile_nonselcted.png"];
-        obj.title = [[LanguageManager sharedManager] languageSelectedStringForKey:[Utils isLogin]?@"PROFILE":@"LOGIN"];
+        obj.title = [Utils isLogin]?@"PROFILE":@"LOGIN";
         
         [_arrMenuList addObject:obj];
         
@@ -109,7 +118,7 @@
         obj2.unSelectedImage = [UIImage new];
         obj2.selectedImage = [UIImage imageNamed:@"003_plus_qr_selected.png"];
         obj2.unSelectedImage = [UIImage imageNamed:@"003_plus_qr_nonselected.png"];
-        obj2.title = [[LanguageManager sharedManager] languageSelectedStringForKey:@"QR SCANNER"];
+        obj2.title = @"QR SCANNER";
         
         [_arrMenuList addObject:obj2];
         
@@ -119,7 +128,7 @@
         obj3.unSelectedImage = [UIImage new];
         obj3.selectedImage = [UIImage imageNamed:@"003_plus_setting_selected.png"];
         obj3.unSelectedImage = [UIImage imageNamed:@"003_plus_setting_nonselected.png"];
-        obj3.title = [[LanguageManager sharedManager] languageSelectedStringForKey:@"SETTING"];
+        obj3.title = @"SETTING";
         
         [_arrMenuList addObject:obj3];
         
@@ -132,7 +141,7 @@
 -(void)menuListDidChangeFromLogin
 {
     CellObject* temp = self.arrMenuList[0];
-    temp.title = [[LanguageManager sharedManager] languageSelectedStringForKey:@"PROFILE"];
+    temp.title = @"PROFILE";
     //[self.arrMenuList replaceObjectAtIndex:0 withObject:temp];
     [self.menuView.ibTableView reloadData];
 }

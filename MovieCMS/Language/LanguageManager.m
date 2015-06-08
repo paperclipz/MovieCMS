@@ -8,6 +8,10 @@
 
 #import "LanguageManager.h"
 
+@interface LanguageManager()
+@property(nonatomic,strong)NSMutableArray* arrLanguageObject;
+
+@end
 @implementation LanguageManager
 
 + (id)sharedManager {
@@ -20,6 +24,17 @@
     return sharedMyManager;
 }
 
+-(void)AddLanguage:(id)delegate
+{
+    if (!_arrLanguageObject) {
+        _arrLanguageObject = [NSMutableArray new];
+    }
+    if(![_arrLanguageObject containsObject:delegate])
+    {
+        [_arrLanguageObject addObject:delegate];
+    }
+    
+}
 -(NSString*) languageSelectedStringForKey:(NSString*) key
 {
     
@@ -48,6 +63,23 @@
         NSString* str=[languageBundle localizedStringForKey:key value:@"" table:nil];
     
     return str;
+}
+
+-(void)LanguageDidSelect:(Language)lang
+{
+    _lang = lang;
+    
+    for (int i = 0;i<self.arrLanguageObject.count;i++)
+    {
+        MasterViewController*  vc = self.arrLanguageObject[i];
+        if (vc.languageBlock) {
+            vc.languageBlock();
+        }
+        else{
+            [self.arrLanguageObject removeObject:vc];
+        }
+        
+    }
 }
 
 @end

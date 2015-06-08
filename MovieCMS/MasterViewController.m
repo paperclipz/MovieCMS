@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[[LanguageManager sharedManager] AddLanguage:self];
     // Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated

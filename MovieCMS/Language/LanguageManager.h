@@ -11,7 +11,9 @@
 @interface LanguageManager : NSObject
 
 @property(nonatomic,assign)Language lang;
-
 -(NSString*) languageSelectedStringForKey:(NSString*) key;
 + (id)sharedManager;
+-(void)AddLanguage:(id)delegate;
+-(void)LanguageDidSelect:(Language)lang;
+
 @end

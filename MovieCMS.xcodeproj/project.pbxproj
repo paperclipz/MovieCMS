@@ -89,7 +89,6 @@
 		8AABB4D41B1DC0E4005057F1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AABB4D31B1DC0E4005057F1 /* MasterViewController.m */; };
 		8ACB49781B1C2B96007575FB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49761B1C2B96007575FB /* MenuViewController.m */; };
 		8ACB497C1B1C2C15007575FB /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB497B1B1C2C15007575FB /* MenuView.m */; };
-		8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB497D1B1C2C23007575FB /* MenuView.xib */; };
 		8ACB49801B1C333E007575FB /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB497F1B1C333E007575FB /* MenuTableViewCell.xib */; };
 		8ACB49831B1C33A9007575FB /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49821B1C33A9007575FB /* MenuTableViewCell.m */; };
 		8ACB49881B1C3966007575FB /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49861B1C3966007575FB /* ProfileViewController.m */; };
@@ -98,6 +97,7 @@
 		8ACB49901B1C3CB1007575FB /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB498E1B1C3CB1007575FB /* DashboardViewController.xib */; };
 		8ACB49941B1C3E86007575FB /* DashboardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */; };
 		8ACB49951B1C3E86007575FB /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */; };
+		8AED3E611B24A1130052464C /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AED3E5F1B24A1130052464C /* MenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,7 +230,6 @@
 		8ACB49761B1C2B96007575FB /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Menu/MenuViewController.m; sourceTree = "<group>"; };
 		8ACB497A1B1C2C15007575FB /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Menu/MenuView.h; sourceTree = "<group>"; };
 		8ACB497B1B1C2C15007575FB /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuView.m; path = Menu/MenuView.m; sourceTree = "<group>"; };
-		8ACB497D1B1C2C23007575FB /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuView.xib; path = Menu/MenuView.xib; sourceTree = "<group>"; };
 		8ACB497F1B1C333E007575FB /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuTableViewCell.xib; path = Menu/MenuTableViewCell.xib; sourceTree = "<group>"; };
 		8ACB49811B1C33A9007575FB /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewCell.h; path = Menu/MenuTableViewCell.h; sourceTree = "<group>"; };
 		8ACB49821B1C33A9007575FB /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewCell.m; path = Menu/MenuTableViewCell.m; sourceTree = "<group>"; };
@@ -243,6 +242,7 @@
 		8ACB49911B1C3E86007575FB /* DashboardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardTableViewCell.h; path = Dashboard/DashboardTableViewCell.h; sourceTree = "<group>"; };
 		8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardTableViewCell.m; path = Dashboard/DashboardTableViewCell.m; sourceTree = "<group>"; };
 		8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashboardTableViewCell.xib; path = Dashboard/DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		8AED3E601B24A1130052464C /* en-US */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "en-US"; path = "Menu/en-US.lproj/MenuView.xib"; sourceTree = "<group>"; };
 		90CDB8E8255FCD5C14267C48 /* Pods-MovieCMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCMS/Pods-MovieCMS.debug.xcconfig"; sourceTree = "<group>"; };
 		C94BFC604D4D8708FB11DE53 /* libPods-MovieCMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MovieCMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -564,7 +564,7 @@
 				8ACB49761B1C2B96007575FB /* MenuViewController.m */,
 				8ACB497A1B1C2C15007575FB /* MenuView.h */,
 				8ACB497B1B1C2C15007575FB /* MenuView.m */,
-				8ACB497D1B1C2C23007575FB /* MenuView.xib */,
+				8AED3E5F1B24A1130052464C /* MenuView.xib */,
 				8ACB49811B1C33A9007575FB /* MenuTableViewCell.h */,
 				8ACB49821B1C33A9007575FB /* MenuTableViewCell.m */,
 				8ACB497F1B1C333E007575FB /* MenuTableViewCell.xib */,
@@ -734,7 +734,6 @@
 				8AABB4971B1C78ED005057F1 /* 001_6plus_biglogo.png in Resources */,
 				8AABB4901B1C78ED005057F1 /* 003_plus.jpg in Resources */,
 				8AABB4A51B1C78ED005057F1 /* 003_plus_qr_selected.png in Resources */,
-				8ACB497E1B1C2C23007575FB /* MenuView.xib in Resources */,
 				8AABB4A01B1C78ED005057F1 /* 002_6plus_winner_nonselected.png in Resources */,
 				8AABB4B81B1D5760005057F1 /* QRScannerViewController.xib in Resources */,
 				8AABB49B1B1C78ED005057F1 /* 001_6plus_whitebutton.png in Resources */,
@@ -750,6 +749,7 @@
 				8A648AEB1B1C0AD100B14575 /* LaunchScreen.xib in Resources */,
 				8AABB4BD1B1D8804005057F1 /* MenuSelectionCVCell.xib in Resources */,
 				8ACB49801B1C333E007575FB /* MenuTableViewCell.xib in Resources */,
+				8AED3E611B24A1130052464C /* MenuView.xib in Resources */,
 				8AABB49F1B1C78ED005057F1 /* 002_6plus_qticheaderlogo.png in Resources */,
 				8AABB49C1B1C78ED005057F1 /* 002_6plus_burger_icon.png in Resources */,
 				8ACB49951B1C3E86007575FB /* DashboardTableViewCell.xib in Resources */,
@@ -897,6 +897,14 @@
 				8A25EB571B1EFC5A0054495D /* en-US */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8AED3E5F1B24A1130052464C /* MenuView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AED3E601B24A1130052464C /* en-US */,
+			);
+			name = MenuView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

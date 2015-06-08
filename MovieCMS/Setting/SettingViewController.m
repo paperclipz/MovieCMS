@@ -10,7 +10,7 @@
 
 @interface SettingViewController ()
 @property (strong, nonatomic) IBOutlet UIPickerView *ibLanguagePickerView;
-
+@property (nonatomic,strong)NSArray* arrPickerList;
 @end
 
 @implementation SettingViewController
@@ -21,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.arrPickerList = @[@"ENGLISH", @"CHiNESE", @"MALAY"];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -32,16 +34,42 @@
 // returns the number of 'columns' to display.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 3;
+    return 1;
 }
 
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return 2;
+    return self.arrPickerList.count;
 }
 
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
 
+    
+    return self.arrPickerList[row];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    NSLog(@"selected at row == %d",row);
+    switch (row) {
+        case 0:
+            [[LanguageManager sharedManager] LanguageDidSelect:ENGLISH];
+
+            break;
+        case 1:
+            [[LanguageManager sharedManager] LanguageDidSelect:CHINESE];
+            
+            break;
+        case 2:
+            [[LanguageManager sharedManager] LanguageDidSelect:MALAY];
+            
+            break;
+            
+        default:
+            break;
+    }
+}
 
 /*
 #pragma mark - Navigation

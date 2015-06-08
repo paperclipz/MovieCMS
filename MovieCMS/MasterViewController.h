@@ -15,6 +15,7 @@
 @interface MasterViewController : UIViewController<UITextFieldDelegate>
 -(void)toggleMenuOpen;
 
+@property(nonatomic,copy)LanguageBlock languageBlock;
 @end
 
 @interface MasterViewController(Additions)

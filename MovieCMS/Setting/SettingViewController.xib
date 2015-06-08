@@ -117,9 +117,6 @@
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XX6-cR-2x6">
                     <rect key="frame" x="243" y="168" width="51" height="31"/>
                 </switch>
-                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwG-L0-qag">
-                    <rect key="frame" x="0.0" y="406" width="320" height="162"/>
-                </pickerView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRO-JP-3jc">
                     <rect key="frame" x="202" y="220" width="90" height="30"/>
                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
@@ -128,6 +125,13 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwG-L0-qag">
+                    <rect key="frame" x="0.0" y="264" width="320" height="162"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Vok-Ij-Sqq"/>
+                        <outlet property="delegate" destination="-1" id="tNx-bL-w0p"/>
+                    </connections>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

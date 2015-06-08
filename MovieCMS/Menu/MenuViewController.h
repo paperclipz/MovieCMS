@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MenuView.h"
-#import "MovieCMS-Swift.h"
 
 typedef void (^DidSelectMenuAtIndexBlock)(int index);
 @interface MenuViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic)MenuView* menuView;
 @property (copy, nonatomic)DidSelectMenuAtIndexBlock didSelectMenuAtIndexBlock;
-
+@property (nonatomic,copy)LanguageBlock languageBlock;
 
 -(void)menuListDidChangeFromLogin;
 
