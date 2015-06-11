@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "WinnerDisplayViewController.h"
+#import "QRCodeReaderDelegate.h"
 
-@interface QRScannerViewController : MasterViewController
+@interface QRScannerViewController : MasterViewController<QRCodeReaderDelegate>
 
 @property (strong, nonatomic) WinnerDisplayViewController *winnerDisplayViewController;
 

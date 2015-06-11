@@ -11,6 +11,7 @@
 		8A0563701B2025CB008B7061 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A05636E1B2025CB008B7061 /* LoginViewController.xib */; };
 		8A25EB551B1EF16D0054495D /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A25EB541B1EF16D0054495D /* LanguageManager.m */; };
 		8A25EB761B1F03B70054495D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A25EB6E1B1F00C60054495D /* Localizable.strings */; };
+		8A38C98E1B297B24003361B1 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A38C98D1B297B24003361B1 /* MenuView.xib */; };
 		8A648ADD1B1C0AD100B14575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648ADC1B1C0AD100B14575 /* main.m */; };
 		8A648AE01B1C0AD100B14575 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648ADF1B1C0AD100B14575 /* AppDelegate.m */; };
 		8A648AE31B1C0AD100B14575 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A648AE21B1C0AD100B14575 /* ViewController.m */; };
@@ -97,7 +98,6 @@
 		8ACB49901B1C3CB1007575FB /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB498E1B1C3CB1007575FB /* DashboardViewController.xib */; };
 		8ACB49941B1C3E86007575FB /* DashboardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */; };
 		8ACB49951B1C3E86007575FB /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */; };
-		8AED3E611B24A1130052464C /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AED3E5F1B24A1130052464C /* MenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +124,7 @@
 		8A25EB701B1F00C80054495D /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8A25EB741B1F011B0054495D /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8A25EB771B1F04520054495D /* LangManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LangManager.swift; path = Language/LangManager.swift; sourceTree = "<group>"; };
+		8A38C98D1B297B24003361B1 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuView.xib; path = Menu/MenuView.xib; sourceTree = "<group>"; };
 		8A648AD71B1C0AD100B14575 /* MovieCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A648ADB1B1C0AD100B14575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A648ADC1B1C0AD100B14575 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -242,7 +243,6 @@
 		8ACB49911B1C3E86007575FB /* DashboardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardTableViewCell.h; path = Dashboard/DashboardTableViewCell.h; sourceTree = "<group>"; };
 		8ACB49921B1C3E86007575FB /* DashboardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardTableViewCell.m; path = Dashboard/DashboardTableViewCell.m; sourceTree = "<group>"; };
 		8ACB49931B1C3E86007575FB /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashboardTableViewCell.xib; path = Dashboard/DashboardTableViewCell.xib; sourceTree = "<group>"; };
-		8AED3E601B24A1130052464C /* en-US */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "en-US"; path = "Menu/en-US.lproj/MenuView.xib"; sourceTree = "<group>"; };
 		90CDB8E8255FCD5C14267C48 /* Pods-MovieCMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieCMS/Pods-MovieCMS.debug.xcconfig"; sourceTree = "<group>"; };
 		C94BFC604D4D8708FB11DE53 /* libPods-MovieCMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MovieCMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -564,7 +564,7 @@
 				8ACB49761B1C2B96007575FB /* MenuViewController.m */,
 				8ACB497A1B1C2C15007575FB /* MenuView.h */,
 				8ACB497B1B1C2C15007575FB /* MenuView.m */,
-				8AED3E5F1B24A1130052464C /* MenuView.xib */,
+				8A38C98D1B297B24003361B1 /* MenuView.xib */,
 				8ACB49811B1C33A9007575FB /* MenuTableViewCell.h */,
 				8ACB49821B1C33A9007575FB /* MenuTableViewCell.m */,
 				8ACB497F1B1C333E007575FB /* MenuTableViewCell.xib */,
@@ -671,7 +671,7 @@
 				TargetAttributes = {
 					8A648AD61B1C0AD100B14575 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 2YT7384LQS;
+						DevelopmentTeam = 8PD9U3N67G;
 					};
 					8A648AEF1B1C0AD100B14575 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -749,7 +749,6 @@
 				8A648AEB1B1C0AD100B14575 /* LaunchScreen.xib in Resources */,
 				8AABB4BD1B1D8804005057F1 /* MenuSelectionCVCell.xib in Resources */,
 				8ACB49801B1C333E007575FB /* MenuTableViewCell.xib in Resources */,
-				8AED3E611B24A1130052464C /* MenuView.xib in Resources */,
 				8AABB49F1B1C78ED005057F1 /* 002_6plus_qticheaderlogo.png in Resources */,
 				8AABB49C1B1C78ED005057F1 /* 002_6plus_burger_icon.png in Resources */,
 				8ACB49951B1C3E86007575FB /* DashboardTableViewCell.xib in Resources */,
@@ -764,6 +763,7 @@
 				8AABB4281B1C5567005057F1 /* OpenSans-Regular.ttf in Resources */,
 				8AABB4231B1C5567005057F1 /* OpenSans-ExtraBold.ttf in Resources */,
 				8AABB42A1B1C5567005057F1 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				8A38C98E1B297B24003361B1 /* MenuView.xib in Resources */,
 				8AABB4251B1C5567005057F1 /* OpenSans-Italic.ttf in Resources */,
 				8AABB4961B1C78ED005057F1 /* 001_6plus_background.png in Resources */,
 				8A83491C1B21AFC400CDD542 /* WinnerDisplayViewController.xib in Resources */,
@@ -899,14 +899,6 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		8AED3E5F1B24A1130052464C /* MenuView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AED3E601B24A1130052464C /* en-US */,
-			);
-			name = MenuView.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -995,16 +987,17 @@
 			baseConfigurationReference = 90CDB8E8255FCD5C14267C48 /* Pods-MovieCMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucky8 Technology Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucky8 Technology Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PrefixHeader.pch";
 				INFOPLIST_FILE = MovieCMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8f961f42-f9fc-419f-b6a2-b6e8d6909504";
+				PRODUCT_NAME = MovieCMS;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MovieCMS/MovieCMS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1015,16 +1008,17 @@
 			baseConfigurationReference = 36F4DCF47E6A738B4219ECC3 /* Pods-MovieCMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucky8 Technology Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucky8 Technology Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PrefixHeader.pch";
 				INFOPLIST_FILE = MovieCMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8f961f42-f9fc-419f-b6a2-b6e8d6909504";
+				PRODUCT_NAME = MovieCMS;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MovieCMS/MovieCMS-Bridging-Header.h";
 			};
 			name = Release;

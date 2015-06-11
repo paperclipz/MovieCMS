@@ -10,6 +10,7 @@
 
 @interface SettingViewController ()
 @property (strong, nonatomic) IBOutlet UIPickerView *ibLanguagePickerView;
+@property (strong, nonatomic) IBOutlet UIButton *btnLanguage;
 @property (nonatomic,strong)NSArray* arrPickerList;
 @end
 
@@ -21,14 +22,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.arrPickerList = @[@"ENGLISH", @"CHiNESE", @"MALAY"];
+    [self initSelfView];
+    
 
     // Do any additional setup after loading the view from its nib.
+}
+-(void)initSelfView
+{
+    self.arrPickerList = @[@"ENGLISH", @"MALAY",@"CHiNESE"];
+    [self.btnLanguage setTitle:[Utils playerPrefLanguage] forState:UIControlStateNormal];
+    [self.ibLanguagePickerView selectRow:[Utils playerPrefLanguageToEnum] inComponent:0 animated:NO];
+    [self.btnLanguage addTarget:self action:@selector(btnLangClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self showPickerView:NO];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)btnLangClicked:(id)sender
+{
+    [self showPickerView:YES];
+    NSLog(@"ggwp");
 }
 
 // returns the number of 'columns' to display.
@@ -51,26 +67,37 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSLog(@"selected at row == %d",row);
-    switch (row) {
-        case 0:
+    switch ((Language)row) {
+        default:
+        case ENGLISH:
             [[LanguageManager sharedManager] LanguageDidSelect:ENGLISH];
+            [self.btnLanguage setTitle:@"ENGLISH" forState:UIControlStateNormal];
+            [Utils setPlayerPrefLanguage:@"ENGLISH"];
 
             break;
-        case 1:
+        case CHINESE:
             [[LanguageManager sharedManager] LanguageDidSelect:CHINESE];
-            
+            [self.btnLanguage setTitle:@"CHINESE" forState:UIControlStateNormal];
+            [Utils setPlayerPrefLanguage:@"CHINESE"];
+
             break;
-        case 2:
+        case MALAY:
             [[LanguageManager sharedManager] LanguageDidSelect:MALAY];
-            
+            [self.btnLanguage setTitle:@"MALAY" forState:UIControlStateNormal];
+            [Utils setPlayerPrefLanguage:@"MALAY"];
+
             break;
-            
-        default:
-            break;
+
     }
+    [self showPickerView:NO];
 }
 
+-(void)showPickerView:(BOOL)isShow
+{
+    
+    self.ibLanguagePickerView.hidden = !isShow;
+  
+}
 /*
 #pragma mark - Navigation
 

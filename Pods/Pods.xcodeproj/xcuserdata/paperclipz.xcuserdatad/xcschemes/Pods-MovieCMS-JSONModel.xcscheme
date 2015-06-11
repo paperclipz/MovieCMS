@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C06D908D2C9E82F31E5F04CC"
+               BlueprintIdentifier = "0EF710B7A7453299FDDA07F0"
                BuildableName = "libPods-MovieCMS-JSONModel.a"
                BlueprintName = "Pods-MovieCMS-JSONModel"
                ReferencedContainer = "container:Pods.xcodeproj">

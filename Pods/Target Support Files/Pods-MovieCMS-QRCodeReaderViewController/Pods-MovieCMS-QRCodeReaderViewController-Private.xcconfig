@@ -1,0 +1,6 @@
+#include "Pods-MovieCMS-QRCodeReaderViewController.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/QRCodeReaderViewController" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/IQKeyboardManager" "${PODS_ROOT}/Headers/Public/JSONModel" "${PODS_ROOT}/Headers/Public/MKNetworkKit" "${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories" "${PODS_ROOT}/Headers/Public/QRCodeReaderViewController" "${PODS_ROOT}/Headers/Public/Reachability"
+OTHER_LDFLAGS = ${PODS_MOVIECMS_QRCODEREADERVIEWCONTROLLER_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "283509A5A6DB5312A33E9255"
+               BlueprintIdentifier = "008D380ED2C61E77142531DC"
                BuildableName = "libPods-MovieCMS-MKNetworkKit.a"
                BlueprintName = "Pods-MovieCMS-MKNetworkKit"
                ReferencedContainer = "container:Pods.xcodeproj">

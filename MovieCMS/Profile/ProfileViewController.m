@@ -34,6 +34,8 @@
         temp.delegate = self;
 
     }
+    [self makeTextFieldEditable:self.isEditing];
+
 }
 
 -(IBAction)btnBackClicked:(id)sender
@@ -49,6 +51,11 @@
         tempTxtField.borderStyle = isEditable?UITextBorderStyleRoundedRect:UITextBorderStyleNone;
         tempTxtField.enabled = isEditable?YES:NO;
     }
+    
+    if (!isEditable) {
+        [self keyboardDidShow:NO];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,9 +69,46 @@
     [(UIButton*)sender setTitle:self.isEditing?@"DONE":@"EDIT" forState:UIControlStateNormal];
 }
 
+#pragma mark -UITextFieldDelegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"textFieldDidBeginEditing");
+    [self keyboardDidShow:YES];
+    
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [super textFieldShouldReturn:textField];
+
+    [self keyboardDidShow:NO];
+
     return YES;
+}
+-(void)keyboardDidShow:(BOOL)isShow
+{
+//    if (isShow) {
+//        __weak typeof(self)weakSelf = self;
+//        [UIView animateWithDuration:1.0f animations:^{
+//            CGRect tempFrame = CGRectMake(0, -[Utils getKeyboardHeight], weakSelf.view.frame.size.width, weakSelf.view.frame.size.height);
+//            weakSelf.view.frame = tempFrame;
+//        }];
+//
+//    }
+//    else{
+//        __weak typeof(self)weakSelf = self;
+//        [UIView animateWithDuration:1.0f animations:^{
+//            CGRect tempFrame = CGRectMake(0, 0, weakSelf.view.frame.size.width, weakSelf.view.frame.size.height);
+//            weakSelf.view.frame = tempFrame;
+//        }];
+//    }
+   
+
 }
 /*
 #pragma mark - Navigation

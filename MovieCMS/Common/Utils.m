@@ -9,7 +9,8 @@
 #import "Utils.h"
 
 static BOOL isLogin = NO;
-
+static NSString* playerLanguage;
+NSString* const PLAYER_LANG = @"LANGUAGE";
 
 @implementation Utils
 
@@ -40,5 +41,62 @@ static BOOL isLogin = NO;
 +(BOOL)isLogin
 {
     return isLogin;
+}
+
++(void)setPlayerPrefLanguage:(NSString*)lang
+{
+    playerLanguage = lang;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaults setObject:lang
+                     forKey:PLAYER_LANG];
+
+    [userDefaults synchronize];
+}
++(NSString*)playerPrefLanguage
+{
+    if(!playerLanguage)
+    {
+      
+        playerLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:PLAYER_LANG];
+        if(playerLanguage == nil)
+        {
+            playerLanguage = @"ENGLISH";
+        }
+        
+    }
+       return playerLanguage;
+}
+
++(Language)playerPrefLanguageToEnum
+{
+    
+    Language temp;
+    
+    if(!playerLanguage)
+    {
+        playerLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:PLAYER_LANG];
+        if(playerLanguage == nil)
+        {
+            playerLanguage = @"ENGLISH";
+        }
+    }
+ 
+    if([playerLanguage isEqualToString:@"ENGLISH"])
+    {
+        temp = ENGLISH;
+    }
+    else if([playerLanguage isEqualToString:@"MALAY"])
+    {
+        temp = MALAY;
+
+    }
+    else if([playerLanguage isEqualToString:@"CHINESE"])
+    {
+        temp = CHINESE;
+
+    }
+    
+    return temp;
 }
 @end

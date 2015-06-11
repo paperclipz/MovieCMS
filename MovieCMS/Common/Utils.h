@@ -15,9 +15,9 @@ typedef void (^LanguageBlock)(void);
 
 typedef enum
 {
-    ENGLISH = 1,
-    MALAY = 2,
-    CHINESE = 3
+    ENGLISH = 0,
+    MALAY = 1,
+    CHINESE = 2
 } Language;
 
 
@@ -39,5 +39,8 @@ typedef enum
 +(float)getKeyboardHeight;
 +(BOOL)isLogin;
 +(void)setIsLogin:(BOOL)flag;
++(NSString*)playerPrefLanguage;
++(void)setPlayerPrefLanguage:(NSString*)lang;
++(Language)playerPrefLanguageToEnum;
 
 @end

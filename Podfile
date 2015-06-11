@@ -4,9 +4,10 @@
 target 'MovieCMS' do
 pod 'JSONModel'
 pod 'MKNetworkKit'
+pod 'IQKeyboardManager'
+pod 'QRCodeReaderViewController'
 end
 
 target 'MovieCMSTests' do
 
 end
-

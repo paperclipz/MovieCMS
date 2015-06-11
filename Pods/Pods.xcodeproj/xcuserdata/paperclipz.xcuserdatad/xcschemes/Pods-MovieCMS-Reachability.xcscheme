@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "24ABBD497646A1340D47233B"
+               BlueprintIdentifier = "E1F9839EC856043F2094C8E5"
                BuildableName = "libPods-MovieCMS-Reachability.a"
                BlueprintName = "Pods-MovieCMS-Reachability"
                ReferencedContainer = "container:Pods.xcodeproj">

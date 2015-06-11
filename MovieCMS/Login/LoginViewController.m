@@ -85,36 +85,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark -UITextFieldDelegate
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    NSLog(@"textFieldDidBeginEditing");
-    __weak typeof(self)weakSelf = self;
-    [UIView animateWithDuration:1.0f animations:^{
-           CGRect tempFrame = CGRectMake(0, -[Utils getKeyboardHeight], weakSelf.view.frame.size.width, weakSelf.view.frame.size.height);
-        weakSelf.view.frame = tempFrame;
-    }];
- 
-    
-
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-   
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    [super textFieldShouldReturn:textField];
-    __weak typeof(self)weakSelf = self;
-    [UIView animateWithDuration:1.0f animations:^{
-        CGRect tempFrame = CGRectMake(0, 0, weakSelf.view.frame.size.width, weakSelf.view.frame.size.height);
-        weakSelf.view.frame = tempFrame;
-    }];
-
-    return YES;
-}
 /*
 #pragma mark - Navigation
 

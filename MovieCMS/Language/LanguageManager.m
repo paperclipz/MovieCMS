@@ -19,7 +19,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];
-        sharedMyManager.lang = CHINESE;
+        sharedMyManager.lang = [Utils playerPrefLanguageToEnum];
     });
     return sharedMyManager;
 }

@@ -1,16 +1,22 @@
 PODS:
+  - IQKeyboardManager (3.2.4)
   - JSONModel (1.1.0)
   - MKNetworkKit (0.87):
     - Reachability (~> 3.1.0)
+  - QRCodeReaderViewController (3.4.0)
   - Reachability (3.1.1)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - JSONModel
   - MKNetworkKit
+  - QRCodeReaderViewController
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
   JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
   MKNetworkKit: 60ad3c83b62183e40ba75ce772c9427c25b520de
+  QRCodeReaderViewController: bbe09ba1805a74e4da29863a5220a7ad0411f5bc
   Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
 
 COCOAPODS: 0.37.2

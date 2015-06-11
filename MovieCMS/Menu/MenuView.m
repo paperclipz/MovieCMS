@@ -19,12 +19,24 @@
     // Drawing code
 }
 */
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+        [self initSelfView];
+    }
+    return self;
+}
+
 + (id)initializeCustomView
 {
     NSString* viewName;
     
     viewName = NSStringFromClass([self class]);
 
+    NSLog(@"name == %@",viewName);
     NSArray *objects = [[NSBundle mainBundle] loadNibNamed:viewName owner:nil options:nil];
     
     for (id currentObject in objects ){
@@ -41,6 +53,7 @@
 
 -(void)initSelfView
 {
+    
 }
 
 -(void)initTableViewDelegate :(id)delegate
