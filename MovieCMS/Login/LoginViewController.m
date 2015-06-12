@@ -7,12 +7,17 @@
 //
 
 #import "LoginViewController.h"
+#import "ConnectionManager.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "LoginModel.h"
+
 
 @interface LoginViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *ibIVLogo;
 @property (strong, nonatomic) IBOutlet UIView *ibViewContent;
 @property (strong, nonatomic) IBOutlet UIView *ibRegisterView;
 @property (strong, nonatomic) IBOutlet UIButton *ibBtnCloseRegisterView;
+
 @end
 
 @implementation LoginViewController
@@ -22,11 +27,28 @@
    
 }
 - (IBAction)btnLoginClicked:(id)sender {
+    
+    [self requestLogin];
+   
+}
+
+-(void)invokeLogin
+{
     if (_performLoginBlock) {
-         [self addAnimation:kCATransitionFade];
+        [self addAnimation:kCATransitionFade];
         _performLoginBlock();
     }
 }
+
+-(void)validateLogin
+{
+
+    if ([[[DataManager sharedInstance]loginModel].status isEqualToString:@"success"]) {
+        NSLog(@"YES i did it");
+        [self invokeLogin];
+    }
+}
+
 - (IBAction)btnSignupClicked:(id)sender {
     
     [self.ibRegisterView setHidden:NO];
@@ -34,18 +56,29 @@
 }
 - (IBAction)btnSigninFacebookClicked:(id)sender {
 }
+#pragma mark - Connection
+
+-(BOOL)requestLogin
+{
+    __block BOOL isSuccess;
+    NSDictionary *params = @ {@"username" :@"admin", @"password" :@"12345678"};
+
+    [[ConnectionManager Instance] requestServerWithPost:YES requestType:ServerRequestType_Login param:params completeHandler:^(id object) {
+        
+     
+        [self validateLogin];
+        
+    } errorBlock:^(id object) {
+
+        isSuccess = false;
+
+    }];
+    return isSuccess;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initSelfView];
-    
-//    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-//    CGFloat adjusteHeight = (screenHeight - self.ibIVLogo.frame.origin.y - self.ibIVLogo.frame.size.height-self.ibViewContent.frame.size.height)/2;
-//    
-//    NSLog(@"%f == ibviewcontent ==%f",screenHeight,self.ibViewContent.frame.size.height);
-//    self.ibViewContent.frame = CGRectMake(self.ibViewContent.frame.origin.x,self.ibIVLogo.frame.origin.y+self.ibIVLogo.frame.size.height+adjusteHeight, self.ibViewContent.frame.size.width, self.ibViewContent.frame.size.height);
-  
-    // Do any additional setup after loading the view from its nib.
 }
 
 -(void)initSelfView

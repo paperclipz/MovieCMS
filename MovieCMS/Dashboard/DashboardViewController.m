@@ -37,6 +37,7 @@
     [self.btnMenu addTarget:self action:@selector(btnMenuClicked:) forControlEvents: UIControlEventTouchDown];
     [self.btnMenu setTitle:@"" forState:UIControlStateNormal];
     [self styleNavBar];
+    [self requestForAdsBanner];
     
 }
 
@@ -253,6 +254,18 @@
     [UIView commitAnimations];
 }
 
+
+
+
+
+#pragma mark Connection Management
+-(void)requestForAdsBanner
+{
+    [[ConnectionManager Instance]requestServerWithPost:NO requestType:ServerRequestType_ContestBanner param:nil completeHandler:^(id object) {
+        
+    } errorBlock:nil];
+
+}
 /*
 #pragma mark - Navigation
 

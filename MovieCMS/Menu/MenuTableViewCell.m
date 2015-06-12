@@ -51,7 +51,6 @@
     self.selectedImage = selectedImage;
     self.UnSelectedImage = unSelectedImage;
     self.lblTitle.text = [[LanguageManager sharedManager] languageSelectedStringForKey:title];
-    NSLog(@"cell language is == %@",[[LanguageManager sharedManager] languageSelectedStringForKey:title]);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

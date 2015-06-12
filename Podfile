@@ -3,9 +3,10 @@
 
 target 'MovieCMS' do
 pod 'JSONModel'
-pod 'MKNetworkKit'
 pod 'IQKeyboardManager'
 pod 'QRCodeReaderViewController'
+pod "AFNetworking", "~> 2.0"
+pod 'CocoaLumberjack'
 end
 
 target 'MovieCMSTests' do

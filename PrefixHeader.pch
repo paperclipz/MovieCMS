@@ -25,4 +25,12 @@
 #import "LanguageManager.h"
 #import "Constant.h"
 #import "IQKeyboardManager.h"
+#import "Model.h"
+#import <DDLog.h>
+#import <DDASLLogger.h>
+#import <DDTTYLogger.h>
+#import <DDFileLogger.h>
+#import "DataManager.h"
+#import "ConnectionManager.h"
+
 #endif

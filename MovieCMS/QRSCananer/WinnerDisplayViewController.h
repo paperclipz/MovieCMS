@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QRCodeReaderDelegate.h"
 
-@interface WinnerDisplayViewController : MasterViewController
+@interface WinnerDisplayViewController : MasterViewController<QRCodeReaderDelegate>
+- (void)LoadScanner;
 
 @end

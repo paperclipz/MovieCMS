@@ -10,4 +10,6 @@
 
 @implementation Constant
 
+NSString *const SERVER_PATH = @"http://qtic.appsdesignstudio.com/api/";
+
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Constant : NSObject
+extern NSString * const SERVER_PATH;
 
 
 @end

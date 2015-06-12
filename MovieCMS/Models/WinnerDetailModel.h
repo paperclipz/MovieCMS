@@ -8,7 +8,7 @@
 
 #import "JSONModel.h"
 
-@interface WinnerDetailModel : JSONModel
+@interface WinnerDetailModel : Model
 
 @property(strong,nonatomic)NSString* name;
 @property(strong,nonatomic)NSString* nric;

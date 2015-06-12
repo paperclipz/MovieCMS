@@ -32,7 +32,11 @@ typedef enum
 
 typedef enum
 {
-    ServerRequestType_Login = 1
+    ServerRequestType_Login = 1,
+    ServerRequestType_SignUp = 2,
+    ServerRequestType_AdsBanner = 3,
+    ServerRequestType_ContestBanner = 4
+    
 }ServerRequestType;
 
 +(UIColor*)getProjectColor;

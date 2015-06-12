@@ -7,115 +7,111 @@
 //
 
 #import "ConnectionManager.h"
-#import "WinnerDetailModel.h"
+#import "DataManager.h"
 
+@interface ConnectionManager()
+@property (strong, nonatomic) DataManager *dataManager;
 
+@end
 @implementation ConnectionManager
-#pragma mark - Service Request
++ (id)Instance {
+    static DataManager *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[self alloc] init];
+    });
+    return instance;
+}
 
-
-- (NSString*)getUrlFromRequestType:(ServerRequestType)serverRequestType
+-(id)init
 {
-    switch (serverRequestType) {
+    self = [super init];
+    self.serverPath = SERVER_PATH;
+    self.dataManager = [DataManager sharedInstance];
+
+    return self;
+}
+
+-(NSString*)getFullURLwithType:(ServerRequestType)type
+{
+    switch (type) {
         case ServerRequestType_Login:
-            return nil;
+            self.subPath = @"check_login";
             break;
-        default:
-            return nil;
+        case ServerRequestType_SignUp:
+            self.subPath = @"createuser";
+
             break;
-    }
-}
-
-- (MKNetworkOperation*)requestServerWithPost:(BOOL)isPost requestType:(ServerRequestType)serverRequestType requestJsonString:(JSONModel*)object completionHandler:(IDBlock)completionBlock errorHandler:(MKNKErrorBlock)errorBlock
-{
-//    
-    NSString *subPath = [self getUrlFromRequestType:serverRequestType];
-//    self.fullURL = [NSString stringWithFormat:@"%@%@", SERVER_PATH, subPath];
-     NSLog(@"\n\nload Path = %@",self.fullURLPath);
-   
-   
-    NSString *httpMethod = (isPost) ? @"POST" : @"GET";
-    
-    NSLog(@"\n\nRequest URL: %@\nRequest JSON:\n%@", self.fullURLPath, [object toJSONString]);
-    
-    MKNetworkOperation *op = [self operationWithPath:subPath
-                                              params:[object toDictionary]
-                                          httpMethod:httpMethod];
-    
-    [op setPostDataEncoding:MKNKPostDataEncodingTypeURL];
-    
-    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        NSString *jsonString = [completedOperation responseString];
-        
-        NSLog(@"\n\nRequest URL: %@\nResponse JSON:\n%@", self.fullURLPath, jsonString);
-        
-       // [self loadJsonAndStoreInModel:jsonString ServerRequestType:serverRequestType];
-        
-        if (completionBlock) {
-            [self invokeCompletionBlock:completionBlock forType:serverRequestType withJson:jsonString];
-        }
-        
-        
-    } errorHandler:^(MKNetworkOperation *errorOp, NSError* error) {
-        NSLog(@"\n\nerror == %@", [error localizedDescription]);
-        if (errorBlock) {
-            errorBlock(error);
-        }
-    }];
-    [self enqueueOperation:op];
-    return op;
-}
-
--(void)loadJsonAndStoreInModel:(NSString*)jsonString ServerRequestType:(ServerRequestType)serverRequestType
-{
-    //    if ([[dict objectForKey:@"success"] integerValue] != 0) {
-    //        return;
-    //    }
-    
-
-    
-    [self storeJSONIntoModel:jsonString andType:serverRequestType];
-    
-    
-}
-
-- (void)storeJSONIntoModel:(NSString*)jsonString andType:(ServerRequestType)serverRequestType
-{
-    NSError* err = nil;
-
-    switch (serverRequestType) {
-        case ServerRequestType_Login:
-        {
-           WinnerDetailModel* winnerDetailModel = [[WinnerDetailModel alloc] initWithString:jsonString error:&err];
-        }
-           // self.dataStore.mhModelLogin = [[MHModelLogin alloc]initWithResponseDict:responseDict];
+        case ServerRequestType_AdsBanner:
+            self.subPath = @"adsbanner";
+            
             break;
-        default:
+        case ServerRequestType_ContestBanner:
+            self.subPath = @"contestbanner";
+            
             break;
             
-    }
-}
-
-- (void)invokeCompletionBlock:(IDBlock)completionBlock forType:(ServerRequestType)serverRequestType
-{
-    switch (serverRequestType) {
-        case ServerRequestType_Login:
-            completionBlock(nil);
+        default:
             break;
     }
+    
+    return [NSString stringWithFormat:@"%@%@",self.serverPath,self.subPath];
 }
 
-- (void)invokeCompletionBlock:(IDBlock)completionBlock forType:(ServerRequestType)serverRequestType withJson:(NSString*)jsonString
+-(void)requestServerWithPost:(bool)isPost requestType:(ServerRequestType)type param:(NSDictionary*)dict completeHandler:(IDBlock)completeBlock errorBlock:(IErrorBlock)error
 {
-    NSError* err = nil;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
 
-    switch (serverRequestType) {
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+
+    NSLog(@"Request Server [%@]",[self getFullURLwithType:type]);
+    
+    if(isPost)
+    {
+        [manager POST:[self getFullURLwithType:type] parameters:dict
+              success:^(AFHTTPRequestOperation *operation, id responseObject)
+         {
+             [self storeServerData:responseObject requestType:type];
+             completeBlock(responseObject);
+             NSLog(@"JSON: %@", responseObject);
+         }
+              failure:
+         ^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"Error: %@", error);
+         }];
+    }
+    else{
+
+        [manager POST:[self getFullURLwithType:type] parameters:nil
+              success:^(AFHTTPRequestOperation *operation, id responseObject)
+         {
+             [self storeServerData:responseObject requestType:type];
+             completeBlock(responseObject);
+             NSLog(@"JSON: %@", responseObject);
+         }
+              failure:
+         ^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"Error: %@", error);
+         }];
+
+    }
+    
+
+}
+
+-(void)storeServerData:(id)obj requestType:(ServerRequestType)type
+{
+    switch (type) {
         case ServerRequestType_Login:
-        {
-            WinnerDetailModel* winnerDetailModel = [[WinnerDetailModel alloc] initWithString:jsonString error:&err];
-            completionBlock(winnerDetailModel);
-
-        }
+            self.dataManager.loginModel = [[LoginModel alloc]initWithDictionary:obj error:nil];
+            break;
+            
+        case ServerRequestType_SignUp:
+            
+            break;
+            
+        default:
             break;
     }
 }

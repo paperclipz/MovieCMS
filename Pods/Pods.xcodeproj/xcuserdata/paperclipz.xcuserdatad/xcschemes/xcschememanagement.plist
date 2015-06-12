@@ -4,77 +4,65 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-MovieCMS-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovieCMS-CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MovieCMS-IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-MovieCMS-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Pods-MovieCMS-MKNetworkKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-MovieCMS-QRCodeReaderViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>Pods-MovieCMS-Reachability.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-MovieCMS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>008D380ED2C61E77142531DC</key>
+		<key>129EA71B9A04A32792DCBE7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0EF710B7A7453299FDDA07F0</key>
+		<key>25A8B96F7C93C48A23D2319B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20148F417A4FC2ED292B97A5</key>
+		<key>511C28C3A829675D3B56150B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>27FEFD65920D045FD38BAD76</key>
+		<key>94DF1CE341ACD54BE6157CB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E1F9839EC856043F2094C8E5</key>
+		<key>D4A9B2CBC6566D1CC7C0CE30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E5A2603AAF27884D84D593D3</key>
+		<key>EA4F176E1FF7B9D041751431</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,6 +8,9 @@
 
 #import "WinnerDisplayViewController.h"
 #import "WinnerDetailModel.h"
+#import "QRCodeReaderViewController.h"
+#import "QRCodeReader.h"
+
 @interface WinnerDisplayViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *ibIVQRcode;
 @property (strong, nonatomic) IBOutlet UILabel *ibTFName;
@@ -27,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [self initSelfView];
     [self initData];
     // Do any additional setup after loading the view from its nib.
@@ -59,6 +63,48 @@
     self.winnerModel.time = @"VALID TILL 25 JUN 2015";
     [self displayViewData];
 }
+
+
+- (void)LoadScanner
+{
+    if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {
+        static QRCodeReaderViewController *reader = nil;
+        static dispatch_once_t onceToken;
+        
+        dispatch_once(&onceToken, ^{
+            reader                        = [QRCodeReaderViewController new];
+            reader.modalPresentationStyle = UIModalPresentationFormSheet;
+        });
+        reader.delegate = self;
+        
+        [reader setCompletionWithBlock:^(NSString *resultAsString) {
+            NSLog(@"Completion with result: %@", resultAsString);
+        }];
+        
+        [self presentViewController:reader animated:NO completion:NULL];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Reader not supported by the current device" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alert show];
+    }
+}
+
+#pragma mark - QRCodeReader Delegate Methods
+
+- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }];
+}
+
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 /*
 #pragma mark - Navigation
 

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CustomNavBar.h"
 
+
 @interface ViewController ()
 
 @end
@@ -172,9 +173,20 @@
     }
     return _settingViewController;
 }
+-(WinnerDisplayViewController*)winnerDisplayViewController{
+    if(!_winnerDisplayViewController)
+    {
+        _winnerDisplayViewController = [WinnerDisplayViewController new];
+        
+    }
+    return _winnerDisplayViewController;
+}
 
-
-
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader
+{
+    NSLog(@"readerDidCancel");
+    [self.dashboardViewController.navigationController popViewControllerAnimated:NO];
+}
 
 -(void)didSelectMenuAtIndex:(int)index
 {
@@ -192,7 +204,9 @@
             break;
             
         case 1://qr scanner
-            [self.dashboardViewController.navigationController pushViewController:self.qrScannerViewController animated:false];
+            
+            [self.dashboardViewController.navigationController pushViewController:self.winnerDisplayViewController animated:NO];
+            [self.winnerDisplayViewController LoadScanner];
 
             break;
         case 2:
@@ -203,7 +217,6 @@
           //  [self.mfSideMenuContainerViewController setCenterViewController:self.navDashboardViewController];
 
             break;
-            
         default:
             break;
     }

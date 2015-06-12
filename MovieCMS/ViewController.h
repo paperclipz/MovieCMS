@@ -16,8 +16,9 @@
 //#import "MovieCMS-Swift.h"
 #import "LoginViewController.h"
 #import "SettingViewController.h"
+#import "WinnerDisplayViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<QRCodeReaderDelegate>
 
 @property (strong, nonatomic) MFSideMenuContainerViewController *mfSideMenuContainerViewController;
 
@@ -35,6 +36,10 @@
 @property (strong, nonatomic) LoginViewController *loginViewController;
 
 @property (strong, nonatomic) SettingViewController *settingViewController;
+
+
+@property (strong, nonatomic) WinnerDisplayViewController *winnerDisplayViewController;
+
 
 @end
 

@@ -135,13 +135,15 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-  [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+    
+    if (_startScanningAtLoad) {
+        [self startScanning];
+    }
 
-  if (_startScanningAtLoad) {
-    [self startScanning];
-  }
 }
-
 - (void)viewWillDisappear:(BOOL)animated
 {
   [self stopScanning];
